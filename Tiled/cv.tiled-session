@@ -3,10 +3,22 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "",
+    "activeFile": "cv.tmx",
     "expandedProjectPaths": [
     ],
     "fileStates": {
+        "cv.tmx": {
+            "scale": 2.4396,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 103.70552549598295,
+                "y": 144.0809968847352
+            }
+        },
+        "cv.tsx": {
+            "scaleInDock": 1.5138,
+            "scaleInEditor": 1
+        }
     },
     "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/12x12-rpg-tileset",
     "map.height": 40,
@@ -15,9 +27,13 @@
     "map.tileWidth": 12,
     "map.width": 70,
     "openFiles": [
+        "cv.tsx",
+        "cv.tmx"
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "cv.tsx",
+        "cv.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
