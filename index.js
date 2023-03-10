@@ -167,6 +167,7 @@ const foreground = new Sprite({
   image: foregroundImage
 })
 
+// TODO - replace with arrow keys
 const keys = {
   w: {
     pressed: false
@@ -182,16 +183,45 @@ const keys = {
   }
 }
 
-const welcomeTextBlock = new TextBlock({
+const welcomeTextBlocksDistance = 45
+const welcomeTextBlockGrass = new TextBlock({
   position: {
-    x: canvas.width / 2 - 192 / 4 / 2,
-    y: canvas.height / 2 - 68 / 2
-  }
+    x: canvas.width / 2 - 392,
+    y: canvas.height / 2 - 40
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(64, 117, 121)",
+  text: "Welcome to the interactive resume of Petr Filaretov!",
+})
+
+const welcomeTextBlockFence = new TextBlock({
+  position: {
+    x: canvas.width / 2 - 250,
+    y: welcomeTextBlockGrass.position.y + welcomeTextBlocksDistance
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(248, 212, 158)",
+  text: "Use arrows",
+})
+
+const welcomeTextBlockSand = new TextBlock({
+  position: {
+    x: canvas.width / 2 - 250,
+    y: welcomeTextBlockFence.position.y + 1.7 * welcomeTextBlocksDistance
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(160, 101, 77)",
+  text: "follow the sand road >>>",
 })
 
 const movables = [
   background,
-  welcomeTextBlock,
+  welcomeTextBlockGrass,
+  welcomeTextBlockFence,
+  welcomeTextBlockSand,
   ...boundaries,
   foreground,
   ...battleZones,
@@ -199,7 +229,9 @@ const movables = [
 ]
 const renderables = [
   background,
-  welcomeTextBlock,
+  welcomeTextBlockGrass,
+  welcomeTextBlockFence,
+  welcomeTextBlockSand,
   ...boundaries,
   ...battleZones,
   ...characters,
