@@ -21,8 +21,8 @@ for (let i = 0; i < charactersMapData.length; i += 70) {
 
 const boundaries = []
 const offset = {
-  x: -735,
-  y: -650
+  x: -229,
+  y: -720
 }
 
 collisionsMap.forEach((row, i) => {
@@ -183,33 +183,62 @@ const keys = {
   }
 }
 
-const welcomeTextBlocksDistance = 45
-const welcomeTextBlockGrass = new TextBlock({
+const welcomeTextBlockOcean = new TextBlock({
   position: {
-    x: canvas.width / 2 - 465,
-    y: canvas.height / 2 - 45
+    x: canvas.width / 2 - 470,
+    y: canvas.height / 2 - 220
   },
   width: 2000,
   fontSize: 24,
-  style: "rgb(64, 117, 121)",
-  text: "Welcome to the resume of Petr Filaretov!",
+  style: "rgb(84, 173, 159)",
+  text: "Welcome to",
+})
+const welcomeTextBlockOcean2 = new TextBlock({
+  position: {
+    x: canvas.width / 2 - 420,
+    y: canvas.height / 2 - 170
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(84, 173, 159)",
+  text: "the resume of",
+})
+const welcomeTextBlockOcean3 = new TextBlock({
+  position: {
+    x: canvas.width / 2 - 370,
+    y: canvas.height / 2 - 120
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(84, 173, 159)",
+  text: "Petr Filaretov",
 })
 
-const welcomeTextBlockFence = new TextBlock({
+const welcomeTextBlockFence1 = new TextBlock({
   position: {
-    x: canvas.width / 2 - 346,
-    y: welcomeTextBlockGrass.position.y + welcomeTextBlocksDistance
+    x: canvas.width / 2 + 64,
+    y: canvas.height / 2 - 65
   },
   width: 2000,
   fontSize: 24,
   style: "rgb(241, 230, 214)",
-  text: "      U s e       a r r o w s",
+  text: "U s e",
+})
+const welcomeTextBlockFence2 = new TextBlock({
+  position: {
+    x: canvas.width / 2 + 64,
+    y: canvas.height / 2 + 79
+  },
+  width: 2000,
+  fontSize: 24,
+  style: "rgb(241, 230, 214)",
+  text: "a r r o w s",
 })
 
 const welcomeTextBlockSand = new TextBlock({
   position: {
-    x: canvas.width / 2 - 200,
-    y: welcomeTextBlockFence.position.y + 1.7 * welcomeTextBlocksDistance
+    x: canvas.width / 2 + 100,
+    y: canvas.height / 2 + 15
   },
   width: 2000,
   fontSize: 24,
@@ -219,8 +248,11 @@ const welcomeTextBlockSand = new TextBlock({
 
 const movables = [
   background,
-  welcomeTextBlockGrass,
-  welcomeTextBlockFence,
+  welcomeTextBlockOcean,
+  welcomeTextBlockOcean2,
+  welcomeTextBlockOcean3,
+  welcomeTextBlockFence1,
+  welcomeTextBlockFence2,
   welcomeTextBlockSand,
   ...boundaries,
   foreground,
@@ -229,8 +261,11 @@ const movables = [
 ]
 const renderables = [
   background,
-  welcomeTextBlockGrass,
-  welcomeTextBlockFence,
+  welcomeTextBlockOcean,
+  welcomeTextBlockOcean2,
+  welcomeTextBlockOcean3,
+  welcomeTextBlockFence1,
+  welcomeTextBlockFence2,
   welcomeTextBlockSand,
   ...boundaries,
   ...battleZones,
