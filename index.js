@@ -18,7 +18,6 @@ const charactersMap = []
 for (let i = 0; i < charactersMapData.length; i += 70) {
   charactersMap.push(charactersMapData.slice(i, 70 + i))
 }
-console.log(charactersMap)
 
 const boundaries = []
 const offset = {
@@ -183,8 +182,16 @@ const keys = {
   }
 }
 
+const welcomeTextBlock = new TextBlock({
+  position: {
+    x: canvas.width / 2 - 192 / 4 / 2,
+    y: canvas.height / 2 - 68 / 2
+  }
+})
+
 const movables = [
   background,
+  welcomeTextBlock,
   ...boundaries,
   foreground,
   ...battleZones,
@@ -192,6 +199,7 @@ const movables = [
 ]
 const renderables = [
   background,
+  welcomeTextBlock,
   ...boundaries,
   ...battleZones,
   ...characters,

@@ -242,6 +242,21 @@ class Boundary {
   }
 }
 
+class TextBlock {
+  constructor({ position }) {
+    this.position = position
+    this.width = 480
+    this.height = 480
+  }
+
+  draw() {
+    c.font = "32px \"Press Start 2P\", cursive"
+    // c.font = "italic 4.2em \"Fira Sans\", serif"
+    c.fillStyle = "black"
+    c.fillText("Welcome to Petr's CV!", this.position.x, this.position.y, this.width)
+  }
+}
+
 class Character extends Sprite {
   constructor({
     position,
