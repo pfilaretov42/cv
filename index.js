@@ -186,35 +186,35 @@ const keys = {
 const welcomeTextBlocksDistance = 45
 const welcomeTextBlockGrass = new TextBlock({
   position: {
-    x: canvas.width / 2 - 392,
-    y: canvas.height / 2 - 40
+    x: canvas.width / 2 - 465,
+    y: canvas.height / 2 - 45
   },
   width: 2000,
   fontSize: 24,
   style: "rgb(64, 117, 121)",
-  text: "Welcome to the interactive resume of Petr Filaretov!",
+  text: "Welcome to the resume of Petr Filaretov!",
 })
 
 const welcomeTextBlockFence = new TextBlock({
   position: {
-    x: canvas.width / 2 - 250,
+    x: canvas.width / 2 - 346,
     y: welcomeTextBlockGrass.position.y + welcomeTextBlocksDistance
   },
   width: 2000,
   fontSize: 24,
-  style: "rgb(248, 212, 158)",
-  text: "Use arrows",
+  style: "rgb(241, 230, 214)",
+  text: "      U s e       a r r o w s",
 })
 
 const welcomeTextBlockSand = new TextBlock({
   position: {
-    x: canvas.width / 2 - 250,
+    x: canvas.width / 2 - 200,
     y: welcomeTextBlockFence.position.y + 1.7 * welcomeTextBlocksDistance
   },
   width: 2000,
   fontSize: 24,
   style: "rgb(160, 101, 77)",
-  text: "follow the sand road >>>",
+  text: "Follow the road >>>",
 })
 
 const movables = [
