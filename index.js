@@ -65,6 +65,7 @@ villagerImg.src = './img/villager/Idle.png'
 const oldManImg = new Image()
 oldManImg.src = './img/oldMan/Idle.png'
 
+// TODO - add dialog box on top of character when collision is detected, see example here: https://pixel-boy.itch.io/ninja-adventure-asset-pack
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
         // 1026 === villager
@@ -151,6 +152,17 @@ const player = new Sprite({
         left: playerLeftImage,
         right: playerRightImage,
         down: playerDownImage
+    },
+    // This is for initial dialog of user instructions
+    isInteracting: true,
+    interactionAsset: {
+        dialogueIndex: -1,
+        dialogue: [
+            // TODO - wording? key instructions first?
+            'Welcome to the resume of Petr Filaretov!',
+            'Follow the road and talk to people. They will tell you a lot about Petr.',
+            'Use arrow keys to move and Space to interact.'
+        ]
     }
 })
 
@@ -170,7 +182,6 @@ const foreground = new Sprite({
     image: foregroundImage
 })
 
-// TODO - replace with arrow keys
 const keys = {
     up: {
         pressed: false
@@ -186,77 +197,8 @@ const keys = {
     }
 }
 
-const welcomeTextBlockOcean = new TextBlock({
-    position: {
-        x: canvas.width / 2 - 470,
-        y: canvas.height / 2 - 220
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(84, 173, 159)",
-    text: "Welcome to",
-})
-const welcomeTextBlockOcean2 = new TextBlock({
-    position: {
-        x: canvas.width / 2 - 420,
-        y: canvas.height / 2 - 170
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(84, 173, 159)",
-    text: "the resume of",
-})
-const welcomeTextBlockOcean3 = new TextBlock({
-    position: {
-        x: canvas.width / 2 - 370,
-        y: canvas.height / 2 - 120
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(84, 173, 159)",
-    text: "Petr Filaretov",
-})
-// TODO - make "Use arrows" more readable - smaller font?
-// TODO - Another wording (instead of "Use") for better symmetrical fence layout?
-const welcomeTextBlockFence1 = new TextBlock({
-    position: {
-        x: canvas.width / 2 + 64,
-        y: canvas.height / 2 - 65
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(241, 230, 214)",
-    text: "U s e",
-})
-const welcomeTextBlockFence2 = new TextBlock({
-    position: {
-        x: canvas.width / 2 + 64,
-        y: canvas.height / 2 + 79
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(241, 230, 214)",
-    text: "a r r o w s",
-})
-const welcomeTextBlockSand = new TextBlock({
-    position: {
-        x: canvas.width / 2 + 100,
-        y: canvas.height / 2 + 15
-    },
-    width: 2000,
-    fontSize: 24,
-    style: "rgb(160, 101, 77)",
-    text: "Follow the road >>>",
-})
-
 const movables = [
     background,
-    welcomeTextBlockOcean,
-    welcomeTextBlockOcean2,
-    welcomeTextBlockOcean3,
-    welcomeTextBlockFence1,
-    welcomeTextBlockFence2,
-    welcomeTextBlockSand,
     ...boundaries,
     foreground,
     ...battleZones,
@@ -264,12 +206,6 @@ const movables = [
 ]
 const renderables = [
     background,
-    welcomeTextBlockOcean,
-    welcomeTextBlockOcean2,
-    welcomeTextBlockOcean3,
-    welcomeTextBlockFence1,
-    welcomeTextBlockFence2,
-    welcomeTextBlockSand,
     ...boundaries,
     ...battleZones,
     ...characters,

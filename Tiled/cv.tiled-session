@@ -9,6 +9,10 @@
     "exportAsImage.useCurrentScale": true,
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "ChrisCourses/VillagerTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "cv.tmx": {
             "scale": 2.4396,
             "selectedLayer": 1,
@@ -23,7 +27,7 @@
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/Tiled/ChrisCourses",
+    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/NinjaAdventure-Supported/Actor/Characters/Boy",
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
@@ -36,12 +40,13 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "ChrisCourses/VillagerTileset.tsx",
         "cv.tsx",
         "cv.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 12,
-        "width": 12
+        "height": 16,
+        "width": 16
     }
 }
