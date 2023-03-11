@@ -27,31 +27,32 @@ const offset = {
 
 collisionsMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
-    if (symbol === 1025)
+    if (symbol !== 0) {
       boundaries.push(
-        new Boundary({
-          position: {
-            x: j * Boundary.width + offset.x,
-            y: i * Boundary.height + offset.y
-          }
-        })
+          new Boundary({
+            position: {
+              x: j * Boundary.width + offset.x,
+              y: i * Boundary.height + offset.y
+            }
+          })
       )
+    }
   })
 })
 
 const battleZones = []
-
 battleZonesMap.forEach((row, i) => {
   row.forEach((symbol, j) => {
-    if (symbol === 1025)
+    if (symbol !== 0) {
       battleZones.push(
-        new Boundary({
-          position: {
-            x: j * Boundary.width + offset.x,
-            y: i * Boundary.height + offset.y
-          }
-        })
+          new Boundary({
+            position: {
+              x: j * Boundary.width + offset.x,
+              y: i * Boundary.height + offset.y
+            }
+          })
       )
+    }
   })
 })
 
@@ -214,6 +215,8 @@ const welcomeTextBlockOcean3 = new TextBlock({
   text: "Petr Filaretov",
 })
 
+// TODO - make "Use arrows" more readable - smaller font?
+// TODO - Another wording (instead of "Use") for better symmetrical fence layout?
 const welcomeTextBlockFence1 = new TextBlock({
   position: {
     x: canvas.width / 2 + 64,
