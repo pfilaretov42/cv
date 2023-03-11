@@ -172,16 +172,16 @@ const foreground = new Sprite({
 
 // TODO - replace with arrow keys
 const keys = {
-    w: {
+    up: {
         pressed: false
     },
-    a: {
+    left: {
         pressed: false
     },
-    s: {
+    down: {
         pressed: false
     },
-    d: {
+    right: {
         pressed: false
     }
 }
@@ -293,7 +293,7 @@ function animate() {
     if (battle.initiated) return
 
     // activate a battle
-    if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed) {
+    if (keys.up.pressed || keys.left.pressed || keys.down.pressed || keys.right.pressed) {
         for (const battleZone of battleZones) {
             const overlappingArea =
                 (Math.min(player.position.x + player.width, battleZone.position.x + battleZone.width) -
@@ -342,7 +342,7 @@ function animate() {
         }
     }
 
-    if (keys.w.pressed && lastKey === 'w') {
+    if (keys.up.pressed && lastKey === 'w') {
         player.animate = true
         player.image = player.sprites.up
 
@@ -375,7 +375,7 @@ function animate() {
                 movable.position.y += 3
             })
         }
-    } else if (keys.a.pressed && lastKey === 'a') {
+    } else if (keys.left.pressed && lastKey === 'a') {
         player.animate = true
         player.image = player.sprites.left
 
@@ -408,7 +408,7 @@ function animate() {
                 movable.position.x += 3
             })
         }
-    } else if (keys.s.pressed && lastKey === 's') {
+    } else if (keys.down.pressed && lastKey === 's') {
         player.animate = true
         player.image = player.sprites.down
 
@@ -441,7 +441,7 @@ function animate() {
                 movable.position.y -= 3
             })
         }
-    } else if (keys.d.pressed && lastKey === 'd') {
+    } else if (keys.right.pressed && lastKey === 'd') {
         player.animate = true
         player.image = player.sprites.right
 
@@ -515,22 +515,22 @@ window.addEventListener('keydown', (e) => {
             break
         case 'w':
         case 'ArrowUp':
-            keys.w.pressed = true
+            keys.up.pressed = true
             lastKey = 'w'
             break
         case 'a':
         case 'ArrowLeft':
-            keys.a.pressed = true
+            keys.left.pressed = true
             lastKey = 'a'
             break
         case 's':
         case 'ArrowDown':
-            keys.s.pressed = true
+            keys.down.pressed = true
             lastKey = 's'
             break
         case 'd':
         case 'ArrowRight':
-            keys.d.pressed = true
+            keys.right.pressed = true
             lastKey = 'd'
             break
     }
@@ -540,19 +540,19 @@ window.addEventListener('keyup', (e) => {
     switch (e.key) {
         case 'w':
         case 'ArrowUp':
-            keys.w.pressed = false
+            keys.up.pressed = false
             break
         case 'a':
         case 'ArrowLeft':
-            keys.a.pressed = false
+            keys.left.pressed = false
             break
         case 's':
         case 'ArrowDown':
-            keys.s.pressed = false
+            keys.down.pressed = false
             break
         case 'd':
         case 'ArrowRight':
-            keys.d.pressed = false
+            keys.right.pressed = false
             break
     }
 })
