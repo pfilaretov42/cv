@@ -1,10 +1,12 @@
 // TODO - add favicon of the site
+// TODO - need sound?
+// TODO - battle scenes - remove?
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1024
-canvas.height = 576
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
 const collisionsMap = []
 for (let i = 0; i < collisions.length; i += 70) {
@@ -66,6 +68,7 @@ const oldManImg = new Image()
 oldManImg.src = './img/oldMan/Idle.png'
 
 // TODO - add dialog box on top of character when collision is detected, see example here: https://pixel-boy.itch.io/ninja-adventure-asset-pack
+// TODO - add characters' portrait in the interaction box
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
         // 1026 === villager
@@ -139,8 +142,8 @@ playerRightImage.src = './img/playerRight.png'
 
 const player = new Sprite({
     position: {
-        x: canvas.width / 2 - 192 / 4 / 2,
-        y: canvas.height / 2 - 68 / 2
+        x: 560,
+        y: 250
     },
     image: playerDownImage,
     frames: {
