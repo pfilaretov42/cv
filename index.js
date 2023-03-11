@@ -342,7 +342,7 @@ function animate() {
         }
     }
 
-    if (keys.up.pressed && lastKey === 'w') {
+    if (keys.up.pressed && lastKey === KeysPressed.UP) {
         player.animate = true
         player.image = player.sprites.up
 
@@ -375,7 +375,7 @@ function animate() {
                 movable.position.y += 3
             })
         }
-    } else if (keys.left.pressed && lastKey === 'a') {
+    } else if (keys.left.pressed && lastKey === KeysPressed.LEFT) {
         player.animate = true
         player.image = player.sprites.left
 
@@ -408,7 +408,7 @@ function animate() {
                 movable.position.x += 3
             })
         }
-    } else if (keys.down.pressed && lastKey === 's') {
+    } else if (keys.down.pressed && lastKey === KeysPressed.DOWN) {
         player.animate = true
         player.image = player.sprites.down
 
@@ -441,7 +441,7 @@ function animate() {
                 movable.position.y -= 3
             })
         }
-    } else if (keys.right.pressed && lastKey === 'd') {
+    } else if (keys.right.pressed && lastKey === KeysPressed.RIGHT) {
         player.animate = true
         player.image = player.sprites.right
 
@@ -480,6 +480,12 @@ function animate() {
 // animate()
 
 let lastKey = ''
+const KeysPressed = {
+    UP: 'up',
+    DOWN: 'down',
+    LEFT: 'left',
+    RIGHT: 'right',
+}
 window.addEventListener('keydown', (e) => {
     if (player.isInteracting) {
         switch (e.key) {
@@ -516,22 +522,22 @@ window.addEventListener('keydown', (e) => {
         case 'w':
         case 'ArrowUp':
             keys.up.pressed = true
-            lastKey = 'w'
+            lastKey = KeysPressed.UP
             break
         case 'a':
         case 'ArrowLeft':
             keys.left.pressed = true
-            lastKey = 'a'
+            lastKey = KeysPressed.LEFT
             break
         case 's':
         case 'ArrowDown':
             keys.down.pressed = true
-            lastKey = 's'
+            lastKey = KeysPressed.DOWN
             break
         case 'd':
         case 'ArrowRight':
             keys.right.pressed = true
-            lastKey = 'd'
+            lastKey = KeysPressed.RIGHT
             break
     }
 })
