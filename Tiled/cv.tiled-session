@@ -9,9 +9,31 @@
     "exportAsImage.useCurrentScale": true,
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "ChrisCourses/Pellet Town.tmx": {
+            "expandedGroupLayers": [
+                17
+            ],
+            "scale": 1.1892,
+            "selectedLayer": 14,
+            "viewCenter": {
+                "x": 394.38277833837867,
+                "y": 217.37302388160106
+            }
+        },
         "ChrisCourses/VillagerTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "cv-infinite.tmx": {
+            "expandedGroupLayers": [
+                17
+            ],
+            "scale": 1.9666,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 422.5566968371809,
+                "y": 204.66795484592697
+            }
         },
         "cv.tmx": {
             "scale": 2.4396,
@@ -28,6 +50,7 @@
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
     "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/NinjaAdventure-Supported/Actor/Characters/Boy",
+    "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
     "map.lastUsedFormat": "tmx",
@@ -40,6 +63,7 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "cv-infinite.tmx",
         "ChrisCourses/VillagerTileset.tsx",
         "cv.tsx",
         "cv.tmx"
