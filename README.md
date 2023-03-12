@@ -1,5 +1,31 @@
 # cv
 
+# Developing
+
+## When map is updated in Tiled
+
+- Export new map as image
+  - Turn off layers
+    - Foreground objects
+    - Special zone marker
+    - Collisions marker
+    - Characters
+  - Turn other layers on
+  - Zoom to expected level (400%)
+  - File > Export as image > Save to `img/cv-infinite.png`
+- Export foreground objects as image
+  - Turn off all the layers but Foreground objects
+  - Zoom to expected level (400%)
+  - File > Export as image > Save to `img/foregroundObjects.png`
+- Export data
+  - File > Export as > save as JSON
+  - Find "Collisions marker" object and take `data` array
+    - Replace data in `data/collisions.js`
+  - Find "Characters" object and take `data` array
+    - Replace data in `data/characters.js`
+  - Find "Special zone marker" object and take `data` array
+    - Replace data in `data/battleZones.js`
+
 # Links
 
 ## [React example games](https://reactjsexample.com/tag/games/)

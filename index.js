@@ -93,9 +93,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // TODO - another symbol
-        // 1031 === oldMan
-        else if (symbol === 1031) {
+        // 2080 === oldMan
+        else if (symbol === 2080) {
             characters.push(
                 new Character({
                     position: {
