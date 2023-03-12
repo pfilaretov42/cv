@@ -13,33 +13,44 @@
             "expandedGroupLayers": [
                 17
             ],
-            "scale": 1.1892,
+            "scale": 1.18,
             "selectedLayer": 14,
             "viewCenter": {
-                "x": 394.38277833837867,
-                "y": 217.37302388160106
+                "x": 394.0677966101696,
+                "y": 217.3728813559322
             }
+        },
+        "ChrisCourses/RabbitTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "ChrisCourses/TilesetWater.tsx": {
+            "scaleInDock": 1.3867,
+            "scaleInEditor": 1
         },
         "ChrisCourses/VillagerTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ChrisCourses/pokemonStyleGameTileset.tsx": {
+            "scaleInDock": 1.978
+        },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
                 17
             ],
-            "scale": 1.9666,
-            "selectedLayer": 1,
+            "scale": 4,
+            "selectedLayer": 14,
             "viewCenter": {
-                "x": 422.5566968371809,
-                "y": 204.66795484592697
+                "x": 626.25,
+                "y": 994.625
             }
         },
         "cv.tmx": {
             "scale": 2.4396,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 103.70552549598295,
+                "x": 57.79636005902606,
                 "y": 144.0809968847352
             }
         },
@@ -49,7 +60,7 @@
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/12x12-rpg-tileset",
+    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/Animal asset pack 02 by pixel Predator",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -63,10 +74,13 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "ChrisCourses/Pellet Town.tmx",
+        "cv.tmx",
+        "ChrisCourses/TilesetWater.tsx",
+        "ChrisCourses/RabbitTileset.tsx",
         "cv-infinite.tmx",
         "ChrisCourses/VillagerTileset.tsx",
-        "cv.tsx",
-        "cv.tmx"
+        "cv.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
