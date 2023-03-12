@@ -10,25 +10,26 @@ const c = canvas.getContext('2d')
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+const MAP_WIDTH_TILES = 169
 const collisionsMap = []
-for (let i = 0; i < collisions.length; i += 70) {
-    collisionsMap.push(collisions.slice(i, 70 + i))
+for (let i = 0; i < collisions.length; i += MAP_WIDTH_TILES) {
+    collisionsMap.push(collisions.slice(i, MAP_WIDTH_TILES + i))
 }
 
 const battleZonesMap = []
-for (let i = 0; i < battleZonesData.length; i += 70) {
-    battleZonesMap.push(battleZonesData.slice(i, 70 + i))
+for (let i = 0; i < battleZonesData.length; i += MAP_WIDTH_TILES) {
+    battleZonesMap.push(battleZonesData.slice(i, MAP_WIDTH_TILES + i))
 }
 
 const charactersMap = []
-for (let i = 0; i < charactersMapData.length; i += 70) {
-    charactersMap.push(charactersMapData.slice(i, 70 + i))
+for (let i = 0; i < charactersMapData.length; i += MAP_WIDTH_TILES) {
+    charactersMap.push(charactersMapData.slice(i, MAP_WIDTH_TILES + i))
 }
 
 const boundaries = []
 const offset = {
-    x: -229,
-    y: -720
+    x: -270,
+    y: -2355
 }
 
 collisionsMap.forEach((row, i) => {
@@ -73,8 +74,8 @@ oldManImg.src = './img/oldMan/Idle.png'
 // TODO - add characters' portrait in the interaction box
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
-        // 1026 === villager
-        if (symbol === 1026) {
+        // 2108 === villager
+        if (symbol === 2108) {
             characters.push(
                 new Character({
                     position: {
@@ -92,6 +93,7 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
+        // TODO - another symbol
         // 1031 === oldMan
         else if (symbol === 1031) {
             characters.push(
@@ -124,8 +126,8 @@ charactersMap.forEach((row, i) => {
     })
 })
 
-const image = new Image()
-image.src = './img/Pellet Town.png'
+const backgroundImage = new Image()
+backgroundImage.src = './img/cv-infinite.png'
 
 const foregroundImage = new Image()
 foregroundImage.src = './img/foregroundObjects.png'
@@ -176,7 +178,7 @@ const background = new Sprite({
         x: offset.x,
         y: offset.y
     },
-    image: image
+    image: backgroundImage
 })
 
 const foreground = new Sprite({
