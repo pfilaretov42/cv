@@ -64,7 +64,7 @@
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/Animal asset pack 02 by pixel Predator",
+    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/NinjaAdventure/Actor/Characters/Villager3",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -89,7 +89,7 @@
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 12,
-        "width": 12
+        "height": 16,
+        "width": 16
     }
 }
