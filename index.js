@@ -362,7 +362,6 @@ function animate() {
                 // deactivate current animation loop
                 window.cancelAnimationFrame(animationId)
 
-                audio.Map.stop()
                 audio.initBattle.play()
                 audio.battle.play()
 
@@ -611,13 +610,5 @@ window.addEventListener('keyup', (e) => {
         case 'ArrowRight':
             keys.right.pressed = false
             break
-    }
-})
-
-let clicked = false
-addEventListener('click', () => {
-    if (!clicked) {
-        audio.Map.play()
-        clicked = true
     }
 })
