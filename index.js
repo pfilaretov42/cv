@@ -2,7 +2,7 @@
 // TODO - need sound?
 // TODO - battle scenes - remove?
 
-// TODO - bridge - wider, drawdridge?
+// TODO - bridge - a bit wider, drawdridge? or longer wood sticks on the ends
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
