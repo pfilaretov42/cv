@@ -66,9 +66,18 @@ battleZonesMap.forEach((row, i) => {
 const characters = []
 const villagerImg = new Image()
 villagerImg.src = './img/villager/Idle.png'
-
 const oldManImg = new Image()
 oldManImg.src = './img/oldMan/Idle.png'
+const boyImg = new Image()
+boyImg.src = './img/boy/Idle.png'
+const villager3Img = new Image()
+villager3Img.src = './img/villager3/Idle.png'
+const nobleImg = new Image()
+nobleImg.src = './img/noble/Idle.png'
+const greenManImg = new Image()
+greenManImg.src = './img/greenMan/Idle.png'
+const masterImg = new Image()
+masterImg.src = './img/master/Idle.png'
 
 // TODO - add dialog box on top of character when collision is detected, see example here: https://pixel-boy.itch.io/ninja-adventure-asset-pack
 // TODO - add characters' portrait in the interaction box
@@ -107,10 +116,110 @@ charactersMap.forEach((row, i) => {
                         hold: 60
                     },
                     scale: 3,
+                    animate: true,
                     dialogue: ['My bones hurt.']
                 })
             )
         }
+        // 2136 === boy
+        else if (symbol === 2136) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: boyImg,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: ['Hi', 'What is up?']
+                })
+            )
+        }
+        // 3287 === villager3
+        else if (symbol === 3287) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: villager3Img,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: ["Hi", "I'm villager3"]
+                })
+            )
+        }
+        // 3259 === noble
+        else if (symbol === 3259) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: nobleImg,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: ["Hi", "Noble's here!"]
+                })
+            )
+        }
+        // 3203 === greenman
+        else if (symbol === 3203) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: greenManImg,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: ["Hi", "I'm green!"]
+                })
+            )
+        }
+        // 3231 === master
+        else if (symbol === 3231) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: masterImg,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: ["Hi", "Master! Apprentice!"]
+                })
+            )
+        }
+
+
+
+
 
         if (symbol !== 0) {
             boundaries.push(
