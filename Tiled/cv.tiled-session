@@ -9,6 +9,10 @@
     "exportAsImage.useCurrentScale": true,
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "ChrisCourses/CowTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "ChrisCourses/Pellet Town.tmx": {
             "expandedGroupLayers": [
                 17
@@ -74,6 +78,7 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "ChrisCourses/CowTileset.tsx",
         "ChrisCourses/Pellet Town.tmx",
         "cv.tmx",
         "ChrisCourses/TilesetWater.tsx",
