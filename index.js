@@ -64,8 +64,10 @@ battleZonesMap.forEach((row, i) => {
 })
 
 const characters = []
-const villagerImg = new Image()
-villagerImg.src = './img/villager/Idle.png'
+const villagerNoDialogImg = new Image()
+villagerNoDialogImg.src = './img/villager/IdleNoDialog.png'
+const villagerWithDialogImg = new Image()
+villagerWithDialogImg.src = './img/villager/IdleWithDialog.png'
 const oldManImg = new Image()
 oldManImg.src = './img/oldMan/Idle.png'
 const boyImg = new Image()
@@ -79,7 +81,6 @@ greenManImg.src = './img/greenMan/Idle.png'
 const masterImg = new Image()
 masterImg.src = './img/master/Idle.png'
 
-// TODO - add dialog box on top of character when collision is detected, see example here: https://pixel-boy.itch.io/ninja-adventure-asset-pack
 // TODO - add characters' portrait in the interaction box
 // ToDO - villager3, noble, etc - cut 1 pixel? there is a border
 charactersMap.forEach((row, i) => {
@@ -92,7 +93,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: villagerImg,
+                    image: villagerNoDialogImg,
+                    withDialogImage: villagerWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60

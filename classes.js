@@ -231,14 +231,19 @@ class Monster extends Sprite {
     }
 }
 
+class Map {
+    static TILE_SIZE = 12
+    static ZOOM = 4
+}
+
 class Boundary {
-    static width = 48
-    static height = 48
+    static width = Map.TILE_SIZE * Map.ZOOM
+    static height = Map.TILE_SIZE * Map.ZOOM
 
     constructor({position}) {
         this.position = position
-        this.width = 48
-        this.height = 48
+        this.width = Boundary.width
+        this.height = Boundary.height
     }
 
     draw() {
@@ -274,7 +279,9 @@ class Character extends Sprite {
                     animate = false,
                     rotation = 0,
                     scale = 1,
-                    dialogue = ['']
+                    dialogue = [''],
+                    noDialogImage = image,
+                    withDialogImage = image,
                 }) {
         super({
             position,
@@ -289,5 +296,7 @@ class Character extends Sprite {
 
         this.dialogue = dialogue
         this.dialogueIndex = 0
+        this.noDialogImage = noDialogImage
+        this.withDialogImage = withDialogImage
     }
 }

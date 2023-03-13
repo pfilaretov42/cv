@@ -28,7 +28,10 @@ function checkForCharacterCollision({
       })
     ) {
       player.interactionAsset = character
+      character.image = character.withDialogImage
       break
+    } else {
+      character.image = character.noDialogImage
     }
   }
 }
