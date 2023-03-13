@@ -2,8 +2,6 @@
 // TODO - need sound?
 // TODO - battle scenes - remove?
 
-// TODO - bridge - a bit wider, drawdridge? or longer wood sticks on the ends
-
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
@@ -120,7 +118,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ['...', 'Hey mister, have you seen my Doggochu?']
+                    dialogue: [summaryText1, summaryText2]
                 })
             )
         }
@@ -140,7 +138,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ['My bones hurt.']
+                    dialogue: [contactsText1, contactsText2]
                 })
             )
         }
@@ -160,7 +158,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ['Hi', 'What is up?']
+                    dialogue: [skillsText1, skillsText2]
                 })
             )
         }
@@ -180,7 +178,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ["Hi", "I'm villager3"]
+                    dialogue: [educationText1, educationText2]
                 })
             )
         }
@@ -200,7 +198,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ["Hi", "Noble's here!"]
+                    dialogue: [okkoExperienceText1, okkoExperienceText2]
                 })
             )
         }
@@ -220,7 +218,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ["Hi", "I'm green!"]
+                    dialogue: [epamExperienceText1, epamExperienceText2]
                 })
             )
         }
@@ -240,7 +238,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: ["Hi", "Master! Apprentice!"]
+                    dialogue: [bccExperienceText1, bccExperienceText2]
                 })
             )
         }
@@ -297,10 +295,9 @@ const player = new Sprite({
     interactionAsset: {
         dialogueIndex: -1,
         dialogue: [
-            // TODO - wording? key instructions first?
-            'Welcome to the resume of Petr Filaretov!',
-            'Follow the road and talk to people. They will tell you a lot about Petr.',
-            'Use arrow keys to move and Space to interact.'
+            welcomeText1,
+            welcomeText2,
+            welcomeText3,
         ]
     }
 })
