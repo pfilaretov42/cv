@@ -81,6 +81,7 @@ masterImg.src = './img/master/Idle.png'
 
 // TODO - add dialog box on top of character when collision is detected, see example here: https://pixel-boy.itch.io/ninja-adventure-asset-pack
 // TODO - add characters' portrait in the interaction box
+// ToDO - villager3, noble, etc - cut 1 pixel? there is a border
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
         // 2108 === villager
@@ -216,10 +217,6 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-
-
-
-
 
         if (symbol !== 0) {
             boundaries.push(
