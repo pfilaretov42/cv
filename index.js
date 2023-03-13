@@ -64,22 +64,41 @@ battleZonesMap.forEach((row, i) => {
 })
 
 const characters = []
+
 const villagerNoDialogImg = new Image()
 villagerNoDialogImg.src = './img/villager/IdleNoDialog.png'
 const villagerWithDialogImg = new Image()
 villagerWithDialogImg.src = './img/villager/IdleWithDialog.png'
-const oldManImg = new Image()
-oldManImg.src = './img/oldMan/Idle.png'
-const boyImg = new Image()
-boyImg.src = './img/boy/Idle.png'
-const villager3Img = new Image()
-villager3Img.src = './img/villager3/Idle.png'
-const nobleImg = new Image()
-nobleImg.src = './img/noble/Idle.png'
-const greenManImg = new Image()
-greenManImg.src = './img/greenMan/Idle.png'
-const masterImg = new Image()
-masterImg.src = './img/master/Idle.png'
+
+const villager3NoDialogImg = new Image()
+villager3NoDialogImg.src = './img/villager3/IdleNoDialog.png'
+const villager3WithDialogImg = new Image()
+villager3WithDialogImg.src = './img/villager3/IdleWithDialog.png'
+
+const oldManNoDialogImg = new Image()
+oldManNoDialogImg.src = './img/oldMan/IdleNoDialog.png'
+const oldManWithDialogImg = new Image()
+oldManWithDialogImg.src = './img/oldMan/IdleWithDialog.png'
+
+const boyNoDialogImg = new Image()
+boyNoDialogImg.src = './img/boy/IdleNoDialog.png'
+const boyWithDialogImg = new Image()
+boyWithDialogImg.src = './img/boy/IdleWithDialog.png'
+
+const nobleNoDialogImg = new Image()
+nobleNoDialogImg.src = './img/noble/IdleNoDialog.png'
+const nobleWithDialogImg = new Image()
+nobleWithDialogImg.src = './img/noble/IdleWithDialog.png'
+
+const greenManNoDialogImg = new Image()
+greenManNoDialogImg.src = './img/greenMan/IdleNoDialog.png'
+const greenManWithDialogImg = new Image()
+greenManWithDialogImg.src = './img/greenMan/IdleWithDialog.png'
+
+const masterNoDialogImg = new Image()
+masterNoDialogImg.src = './img/master/IdleNoDialog.png'
+const masterWithDialogImg = new Image()
+masterWithDialogImg.src = './img/master/IdleWithDialog.png'
 
 // TODO - add characters' portrait in the interaction box
 // ToDO - villager3, noble, etc - cut 1 pixel? there is a border
@@ -113,7 +132,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: oldManImg,
+                    image: oldManNoDialogImg,
+                    withDialogImage: oldManWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -132,7 +152,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: boyImg,
+                    image: boyNoDialogImg,
+                    withDialogImage: boyWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -151,7 +172,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: villager3Img,
+                    image: villager3NoDialogImg,
+                    withDialogImage: villager3WithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -170,7 +192,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: nobleImg,
+                    image: nobleNoDialogImg,
+                    withDialogImage: nobleWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -189,7 +212,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: greenManImg,
+                    image: greenManNoDialogImg,
+                    withDialogImage: greenManWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -208,7 +232,8 @@ charactersMap.forEach((row, i) => {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: masterImg,
+                    image: masterNoDialogImg,
+                    withDialogImage: masterWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
