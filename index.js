@@ -1,5 +1,6 @@
 // TODO - battle scenes - remove?
 // TODO - update characters' texts
+// TODO - fix performance? crop map?
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -7,20 +8,19 @@ const c = canvas.getContext('2d')
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const MAP_WIDTH_TILES = 169
 const collisionsMap = []
-for (let i = 0; i < collisions.length; i += MAP_WIDTH_TILES) {
-    collisionsMap.push(collisions.slice(i, MAP_WIDTH_TILES + i))
+for (let i = 0; i < collisions.length; i += Map.WIDTH_TILES) {
+    collisionsMap.push(collisions.slice(i, Map.WIDTH_TILES + i))
 }
 
 const battleZonesMap = []
-for (let i = 0; i < battleZonesData.length; i += MAP_WIDTH_TILES) {
-    battleZonesMap.push(battleZonesData.slice(i, MAP_WIDTH_TILES + i))
+for (let i = 0; i < battleZonesData.length; i += Map.WIDTH_TILES) {
+    battleZonesMap.push(battleZonesData.slice(i, Map.WIDTH_TILES + i))
 }
 
 const charactersMap = []
-for (let i = 0; i < charactersMapData.length; i += MAP_WIDTH_TILES) {
-    charactersMap.push(charactersMapData.slice(i, MAP_WIDTH_TILES + i))
+for (let i = 0; i < charactersMapData.length; i += Map.WIDTH_TILES) {
+    charactersMap.push(charactersMapData.slice(i, Map.WIDTH_TILES + i))
 }
 
 const boundaries = []

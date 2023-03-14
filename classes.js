@@ -227,6 +227,7 @@ class Monster extends Sprite {
 }
 
 class Map {
+    static WIDTH_TILES = 169
     static TILE_SIZE = 12
     static ZOOM = 4
 }
