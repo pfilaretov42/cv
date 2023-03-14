@@ -1,6 +1,10 @@
 // TODO - battle scenes - remove?
+//  add credits: site created by Petr Filaretov, thanks to asset providers (links),
+//  I cannot thank enough my mom, dad, uncle, wife, and everyone who made real, supported myself and continue to do so on this exciting journey
+//  of software development
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
+// TODO - add characters faces on dialog
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -117,7 +121,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [summaryText1, summaryText2]
+                    dialogue: [summaryText1, summaryText2],
+                    portrait: "url('img/villager/Faceset.png')",
                 })
             )
         }
@@ -137,7 +142,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [contactsText1, contactsText2]
+                    dialogue: [contactsText1, contactsText2],
+                    portrait: "url('img/oldMan/Faceset.png')",
                 })
             )
         }
@@ -157,7 +163,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [skillsText1, skillsText2]
+                    dialogue: [skillsText1, skillsText2],
+                    portrait: "url('img/boy/Faceset.png')",
                 })
             )
         }
@@ -177,7 +184,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [educationText1, educationText2]
+                    dialogue: [educationText1, educationText2],
+                    portrait: "url('img/villager3/Faceset.png')",
                 })
             )
         }
@@ -197,7 +205,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [okkoExperienceText1, okkoExperienceText2]
+                    dialogue: [okkoExperienceText1, okkoExperienceText2],
+                    portrait: "url('img/noble/Faceset.png')",
                 })
             )
         }
@@ -217,7 +226,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [epamExperienceText1, epamExperienceText2]
+                    dialogue: [epamExperienceText1, epamExperienceText2],
+                    portrait: "url('img/greenMan/Faceset.png')",
                 })
             )
         }
@@ -237,7 +247,8 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [bccExperienceText1, bccExperienceText2]
+                    dialogue: [bccExperienceText1, bccExperienceText2],
+                    portrait: "url('img/master/Faceset.png')",
                 })
             )
         }
@@ -571,6 +582,7 @@ window.addEventListener('keydown', (e) => {
                 player.isInteracting = false
                 player.interactionAsset.dialogueIndex = 0
                 document.querySelector('#characterDialogueBox').style.display = 'none'
+                document.querySelector('#characterDialoguePortrait').style.display = 'none'
                 document.querySelector('#characterPressSpaceBox').style.display = 'none'
 
                 break
@@ -580,13 +592,20 @@ window.addEventListener('keydown', (e) => {
 
     switch (e.key) {
         case ' ':
-            if (!player.interactionAsset) return
+            if (!player.interactionAsset) {
+                return
+            }
 
             // beginning the conversation
             const firstMessage = player.interactionAsset.dialogue[0]
             document.querySelector('#characterDialogueBox').innerHTML = firstMessage
             document.querySelector('#characterDialogueBox').style.display = 'flex'
+
+            document.querySelector('#characterDialoguePortrait').style.display = 'flex'
+            document.querySelector('#characterDialoguePortrait').style.backgroundImage = player.interactionAsset.portrait
+
             document.querySelector('#characterPressSpaceBox').style.display = 'flex'
+
             player.isInteracting = true
             break
         case 'w':

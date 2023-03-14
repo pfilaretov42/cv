@@ -278,6 +278,7 @@ class Character extends Sprite {
                     dialogue = [''],
                     noDialogImage = image,
                     withDialogImage = image,
+                    portrait = null,
                 }) {
         super({
             position,
@@ -294,5 +295,6 @@ class Character extends Sprite {
         this.dialogueIndex = 0
         this.noDialogImage = noDialogImage
         this.withDialogImage = withDialogImage
+        this.portrait = portrait
     }
 }
