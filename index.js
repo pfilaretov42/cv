@@ -1,6 +1,7 @@
 // TODO - add favicon of the site
 // TODO - need sound?
 // TODO - battle scenes - remove?
+// TODO - see issues in DevTools - add DOCTYPE, etc
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -567,6 +568,7 @@ window.addEventListener('keydown', (e) => {
                 if (dialogueIndex <= dialogue.length - 1) {
                     document.querySelector('#characterDialogueBox').innerHTML =
                         player.interactionAsset.dialogue[dialogueIndex]
+                    document.querySelector('#characterPressSpaceBox').style.display = 'flex'
                     return
                 }
 
@@ -574,6 +576,7 @@ window.addEventListener('keydown', (e) => {
                 player.isInteracting = false
                 player.interactionAsset.dialogueIndex = 0
                 document.querySelector('#characterDialogueBox').style.display = 'none'
+                document.querySelector('#characterPressSpaceBox').style.display = 'none'
 
                 break
         }
@@ -588,6 +591,7 @@ window.addEventListener('keydown', (e) => {
             const firstMessage = player.interactionAsset.dialogue[0]
             document.querySelector('#characterDialogueBox').innerHTML = firstMessage
             document.querySelector('#characterDialogueBox').style.display = 'flex'
+            document.querySelector('#characterPressSpaceBox').style.display = 'flex'
             player.isInteracting = true
             break
         case 'w':
