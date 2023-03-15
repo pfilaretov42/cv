@@ -372,7 +372,9 @@ function animate() {
     let moving = true
     player.animate = false
 
-    if (battle.initiated) return
+    // if (battle.initiated) {
+    //     return
+    // }
 
     // activate a battle
     if (keys.up.pressed || keys.left.pressed || keys.down.pressed || keys.right.pressed) {
@@ -388,10 +390,11 @@ function animate() {
                     rectangle2: battleZone
                 }) &&
                 overlappingArea > (player.width * player.height) / 2 &&
-                Math.random() < 0.01
+                // todo - revert
+                Math.random() < 1
             ) {
                 // deactivate current animation loop
-                window.cancelAnimationFrame(animationId)
+                // window.cancelAnimationFrame(animationId)
 
                 battle.initiated = true
                 gsap.to('#overlappingDiv', {
@@ -405,8 +408,26 @@ function animate() {
                             duration: 0.4,
                             onComplete() {
                                 // activate a new animation loop
-                                initBattle()
-                                animateBattle()
+                                // initBattle()
+                                // animateBattle()
+
+                                player.interactionAsset = {
+                                    // TODO - set to the commented one, just in case
+                                    dialogue: ["Dummy"],
+                                    // dialogue: ["Press Space to continue..."],
+                                    portrait: "url('img/cavegirl/Faceset.png')",
+                                    dialogueIndex: 1, // Just a single message needed here
+                                }
+                                player.isInteracting = true
+
+                                document.querySelector('#creditsBox').style.display = 'flex'
+
+                                document.querySelector('#characterDialogueBox').innerHTML = "Press Space to continue..."
+                                document.querySelector('#characterDialogueBox').style.display = 'flex'
+
+                                document.querySelector('#characterDialoguePortrait').style.display = 'flex'
+                                document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
+
                                 gsap.to('#overlappingDiv', {
                                     opacity: 0,
                                     duration: 0.4
@@ -555,7 +576,7 @@ function animate() {
     }
 }
 
-// animate()
+animate()
 
 let lastKey = ''
 const KeysPressed = {
@@ -584,6 +605,9 @@ window.addEventListener('keydown', (e) => {
                 document.querySelector('#characterDialogueBox').style.display = 'none'
                 document.querySelector('#characterDialoguePortrait').style.display = 'none'
                 document.querySelector('#characterPressSpaceBox').style.display = 'none'
+
+                // finish credits
+                document.querySelector('#creditsBox').style.display = 'none'
 
                 break
         }

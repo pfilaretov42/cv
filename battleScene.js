@@ -15,7 +15,13 @@ let battleAnimationId
 let queue
 
 function initBattle() {
-  document.querySelector('#userInterface').style.display = 'block'
+  document.querySelector('#creditsBox').style.display = 'flex'
+  document.querySelector('#characterDialoguePortrait').style.display = 'flex'
+  document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
+  document.querySelector('#characterDialogueBox').style.display = 'flex'
+  document.querySelector('#characterDialogueBox').innerHTML = "Press Space to continue..."
+
+
   document.querySelector('#dialogueBox').style.display = 'none'
   document.querySelector('#enemyHealthBar').style.width = '100%'
   document.querySelector('#playerHealthBar').style.width = '100%'
@@ -120,7 +126,7 @@ function animateBattle() {
   })
 }
 
-animate()
+// animate()
 // initBattle()
 // animateBattle()
 
