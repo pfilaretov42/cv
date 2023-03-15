@@ -4,7 +4,7 @@
 //  of software development
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
-// TODO - add characters faces on dialog
+// TODO - add QR code with links?
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
