@@ -398,7 +398,7 @@ function animate() {
                                 player.interactionAsset = {
                                     // dummy dialog message for the common flow,
                                     // the content of creditsBox in index.html will be displayed
-                                    dialogue: ["Dummy"],
+                                    dialogue: ["Press Space to continue..."],
                                     dialogueIndex: 1, // Just a single message needed here
                                     isCredits: true,
                                 }
@@ -411,6 +411,8 @@ function animate() {
 
                                 document.querySelector('#characterDialoguePortrait').style.display = 'flex'
                                 document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
+
+                                document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
 
                                 gsap.to('#overlappingDiv', {
                                     opacity: 0,
@@ -594,6 +596,7 @@ window.addEventListener('keydown', (e) => {
 
                 if (player.interactionAsset.isCredits === true) {
                     // finish credits
+                    player.interactionAsset = null
                     document.querySelector('#creditsBox').style.display = 'none'
                     animate()
                 }
