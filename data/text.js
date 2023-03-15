@@ -1,7 +1,7 @@
 // TODO - wording? key instructions first?
-const welcomeText1 = 'Welcome to the resume of Petr Filaretov!'
-const welcomeText2 = 'Follow the road and talk to characters. They will tell you ... about Petr.'
-const welcomeText3 = 'Use arrow keys to move and Space to interact.'
+const welcomeText1 = 'Follow the road and talk to characters. They will tell you ... about Petr.'
+const welcomeText2 = 'Use arrow keys to move and Space to interact.'
+const welcomeText3 = 'Good luck!'
 
 const summaryText1 = 'Summary 1'
 const summaryText2 = 'Summary 2'
