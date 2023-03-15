@@ -359,10 +359,6 @@ const renderables = [
     foreground
 ]
 
-const battle = {
-    initiated: false
-}
-
 function animate() {
     const animationId = window.requestAnimationFrame(animate)
     renderables.forEach((renderable) => {
@@ -371,10 +367,6 @@ function animate() {
 
     let moving = true
     player.animate = false
-
-    // if (battle.initiated) {
-    //     return
-    // }
 
     // activate a battle
     if (keys.up.pressed || keys.left.pressed || keys.down.pressed || keys.right.pressed) {
@@ -390,13 +382,11 @@ function animate() {
                     rectangle2: battleZone
                 }) &&
                 overlappingArea > (player.width * player.height) / 2 &&
-                // todo - revert
-                Math.random() < 1
+                Math.random() < 0.01
             ) {
                 // deactivate current animation loop
                 window.cancelAnimationFrame(animationId)
 
-                battle.initiated = true
                 gsap.to('#overlappingDiv', {
                     opacity: 1,
                     repeat: 3,
@@ -407,15 +397,10 @@ function animate() {
                             opacity: 1,
                             duration: 0.4,
                             onComplete() {
-                                // activate a new animation loop
-                                // initBattle()
-                                // animateBattle()
-
                                 player.interactionAsset = {
-                                    // TODO - set to the commented one, just in case
+                                    // dummy dialog message for the common flow,
+                                    // the content of creditsBox in index.html will be displayed
                                     dialogue: ["Dummy"],
-                                    // dialogue: ["Press Space to continue..."],
-                                    portrait: "url('img/cavegirl/Faceset.png')",
                                     dialogueIndex: 1, // Just a single message needed here
                                     isCredits: true,
                                 }
