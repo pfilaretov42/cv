@@ -3,7 +3,6 @@
 //  of software development
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
-// TODO - add QR code with links?
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -581,6 +580,7 @@ window.addEventListener('keydown', (e) => {
                     document.querySelector('#characterDialogueBox').innerHTML =
                         player.interactionAsset.dialogue[dialogueIndex]
                     document.querySelector('#characterPressSpaceBox').style.display = 'flex'
+                    document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
                     return
                 }
 
@@ -590,6 +590,7 @@ window.addEventListener('keydown', (e) => {
                 document.querySelector('#characterDialogueBox').style.display = 'none'
                 document.querySelector('#characterDialoguePortrait').style.display = 'none'
                 document.querySelector('#characterPressSpaceBox').style.display = 'none'
+                document.querySelector('#characterDialogueAddonImage').style.display = 'none'
 
                 if (player.interactionAsset.isCredits === true) {
                     // finish credits
@@ -617,6 +618,7 @@ window.addEventListener('keydown', (e) => {
             document.querySelector('#characterDialoguePortrait').style.backgroundImage = player.interactionAsset.portrait
 
             document.querySelector('#characterPressSpaceBox').style.display = 'flex'
+            document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
 
             player.isInteracting = true
             break
