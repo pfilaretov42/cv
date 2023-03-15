@@ -394,7 +394,7 @@ function animate() {
                 Math.random() < 1
             ) {
                 // deactivate current animation loop
-                // window.cancelAnimationFrame(animationId)
+                window.cancelAnimationFrame(animationId)
 
                 battle.initiated = true
                 gsap.to('#overlappingDiv', {
@@ -417,6 +417,7 @@ function animate() {
                                     // dialogue: ["Press Space to continue..."],
                                     portrait: "url('img/cavegirl/Faceset.png')",
                                     dialogueIndex: 1, // Just a single message needed here
+                                    isCredits: true,
                                 }
                                 player.isInteracting = true
 
@@ -606,8 +607,11 @@ window.addEventListener('keydown', (e) => {
                 document.querySelector('#characterDialoguePortrait').style.display = 'none'
                 document.querySelector('#characterPressSpaceBox').style.display = 'none'
 
-                // finish credits
-                document.querySelector('#creditsBox').style.display = 'none'
+                if (player.interactionAsset.isCredits === true) {
+                    // finish credits
+                    document.querySelector('#creditsBox').style.display = 'none'
+                    animate()
+                }
 
                 break
         }
