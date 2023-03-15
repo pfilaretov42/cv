@@ -1,5 +1,4 @@
-// TODO - battle scenes - remove?
-//  add credits: site created by Petr Filaretov, thanks to asset providers (links),
+// TODO - update credits: site created by Petr Filaretov, thanks to asset providers (links),
 //  I cannot thank enough my mom, dad, uncle, wife, and everyone who made real, supported myself and continue to do so on this exciting journey
 //  of software development
 // TODO - update characters' texts
