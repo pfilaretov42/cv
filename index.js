@@ -3,6 +3,8 @@
 //  of software development
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
+// TODO - minify js
+// TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -119,7 +121,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [summaryText1, summaryText2],
+                    dialogue: summaryTexts,
                     portrait: "url('img/villager/Faceset.png')",
                 })
             )
@@ -302,11 +304,7 @@ const player = new Sprite({
     isInteracting: true,
     interactionAsset: {
         dialogueIndex: -1,
-        dialogue: [
-            welcomeText1,
-            welcomeText2,
-            welcomeText3,
-        ]
+        dialogue: welcomeTexts
     }
 })
 

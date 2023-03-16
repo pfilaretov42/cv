@@ -1,10 +1,22 @@
-// TODO - wording? key instructions first?
-const welcomeText1 = 'Follow the road and talk to characters. They will tell you ... about Petr.'
-const welcomeText2 = 'Use arrow keys to move and Space to interact.'
-const welcomeText3 = 'Good luck!'
+const welcomeTexts = [
+    'Follow the road and talk to the characters.',
+    'Use arrow keys to move and Space to interact.',
+    'Good luck!',
+]
 
-const summaryText1 = 'Summary 1'
-const summaryText2 = 'Summary 2'
+const summaryTexts = [
+    'Hi, here is a quick summary about Petr:',
+    'Lead Software Engineer with technical experience in enterprise solutions, including cloud platforms.',
+    '14 years of hands-on experience in IT.',
+    'AWS Certified Solutions Architect Associate.',
+    'Participation in the full life cycle of the software development project.',
+    'Domain areas include FinTech, Life Science, Media, Housing and Utilities Sector, Telecommunication, and Education.',
+    'Advanced in application development using java/kotlin and Spring.',
+    'Working with both SQL and NoSQL databases.',
+    'Problem isolation and analysis.',
+    'Environment and CI/CD pipeline configurations.',
+    'Learning and mastering new technologies.',
+]
 
 const skillsText1 = 'Key skills:'
 const skillsText2 = 'Java, kotlin'
