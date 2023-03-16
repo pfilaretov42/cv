@@ -9,7 +9,7 @@ const summaryTexts = [
     'Lead Software Engineer with technical experience in enterprise solutions, including cloud platforms.',
     '14 years of hands-on experience in IT.',
     'AWS Certified Solutions Architect Associate.',
-    'Participation in the full life cycle of the software development project.',
+    'Participation in the full life cycle of software development projects.',
     'Domain areas include FinTech, Life Science, Media, Housing and Utilities Sector, Telecommunication, and Education.',
     'Advanced in application development using java/kotlin and Spring.',
     'Working with both SQL and NoSQL databases.',

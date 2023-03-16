@@ -5,6 +5,9 @@
 // TODO - fix performance? crop map?
 // TODO - minify js
 // TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
+// TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
+//  What if the width is too high? player is not in the center as well
+// TODO - make dialogbox background color = 'whitesmoke', but then generate QR with the same background
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
