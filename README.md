@@ -35,6 +35,10 @@
 - run `terser-minifier.js` in Idea
 - result is saved to `cv.min.js`
 
+# Deploy
+
+[How to deploy with Github Pages](https://pages.github.com/)
+
 # Links
 
 ## [React example games](https://reactjsexample.com/tag/games/)
