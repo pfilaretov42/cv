@@ -26,6 +26,15 @@
   - Find "Special zone marker" object and take `data` array
     - Replace data in `data/battleZones.js`
 
+## How to minify JS
+
+- install Terser:
+  ```
+  npm install terser
+  ```
+- run `terser-minifier.js` in Idea
+- result is saved to `cv.min.js`
+
 # Links
 
 ## [React example games](https://reactjsexample.com/tag/games/)
