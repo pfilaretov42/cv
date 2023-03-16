@@ -18,17 +18,38 @@ const summaryTexts = [
     'Learning and mastering new technologies.',
 ]
 
-const skillsText1 = 'Key skills:'
-const skillsText2 = 'Java, kotlin'
+const skillsTexts = [
+    'Petr\'s key skills include the following:',
+    'Programming languages: Java, Kotlin, Groovy, SQL.',
+    'Frameworks and libraries: Spring, Spring Boot, Spring Data, Spring Security, Lombok, mapstruct, Liquibase, MyBatis, junit, Mockito, mockk, slf4j, Swagger, Google Guice.',
+    'Cloud: Amazon Web Services, AWS SDK.',
+    'Message brokers: Kafka, RabbitMQ.',
+    'Development infrastructure: Gradle, Maven, Jenkins, Git, SVN, spotbugs, checkstyle, jacoco, SonarQube, Docker, Kubernetes, Helm, Prometheus, Grafana, BlackDuck, Veracode.',
+    'Databases: PostgreSQL, Oracle, Neo4j.',
+    'IDE: IntelliJ IDEA, Eclipse.',
+    'Modelling systems: draw.io, Microsoft Visio.',
+    'Methodologies: Scrum, Kanban.',
+]
 
-const contactsText1 = 'You can find Petr...'
-const contactsText2 = 'links here'
+const educationTexts = [
+    'Petr has higher education as well as the following certifications:',
+    'AWS Certified Solutions Architect - Associate (2022)',
+    'EPAM Solution Architecture School Graduate (2021)',
+    'Oracle Certified Professional, Java SE 7 Programmer (2016)',
+    'Oracle Certified Associate, Java SE 7 Programmer (2014)',
+]
 
-const educationText1 = 'Petr has degree in ... Higher '
-const educationText2 = 'AWS Certified Solution Architect Associate'
+const contactsTexts = [
+    'Use the links below or the QR code on the right-hand side and take a look at the posts and notes Petr is sharing via the following platforms:',
+    "<a href=\"https://www.linkedin.com/in/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ LinkedIn</a>",
+    "<a href=\"https://dev.to/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ dev.to</a>",
+    "<a href=\"https://github.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ GitHub</a>",
+    "<a href=\"https://twitter.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ Twitter</a>",
+]
 
-const okkoExperienceText1 = 'Working in okko'
-const okkoExperienceText2 = 'Media Content Injector'
+const okkoExperienceTexts = [
+    'Working in okko'
+]
 
 const epamExperienceText1 = 'Worked at EPAM for about 5 years'
 const epamExperienceText2 = 'EWB and others'

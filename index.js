@@ -4,8 +4,8 @@
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
 // TODO - minify js
-// TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 // TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
+// TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 //  What if the width is too high? player is not in the center as well
 // TODO - make dialogbox background color = 'whitesmoke', but then generate QR with the same background
 
@@ -129,27 +129,6 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 2080 === oldMan
-        else if (symbol === 2080) {
-            characters.push(
-                new Character({
-                    position: {
-                        x: j * Boundary.width + offset.x,
-                        y: i * Boundary.height + offset.y
-                    },
-                    image: oldManNoDialogImg,
-                    withDialogImage: oldManWithDialogImg,
-                    frames: {
-                        max: 4,
-                        hold: 60
-                    },
-                    scale: 3,
-                    animate: true,
-                    dialogue: [contactsText1, contactsText2],
-                    portrait: "url('img/oldMan/Faceset.png')",
-                })
-            )
-        }
         // 2136 === boy
         else if (symbol === 2136) {
             characters.push(
@@ -166,8 +145,29 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [skillsText1, skillsText2],
+                    dialogue: skillsTexts,
                     portrait: "url('img/boy/Faceset.png')",
+                })
+            )
+        }
+        // 2080 === oldMan
+        else if (symbol === 2080) {
+            characters.push(
+                new Character({
+                    position: {
+                        x: j * Boundary.width + offset.x,
+                        y: i * Boundary.height + offset.y
+                    },
+                    image: oldManNoDialogImg,
+                    withDialogImage: oldManWithDialogImg,
+                    frames: {
+                        max: 4,
+                        hold: 60
+                    },
+                    scale: 3,
+                    animate: true,
+                    dialogue: educationTexts,
+                    portrait: "url('img/oldMan/Faceset.png')",
                 })
             )
         }
@@ -187,7 +187,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [educationText1, educationText2],
+                    dialogue: contactsTexts,
                     portrait: "url('img/villager3/Faceset.png')",
                 })
             )
@@ -208,7 +208,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [okkoExperienceText1, okkoExperienceText2],
+                    dialogue: okkoExperienceTexts,
                     portrait: "url('img/noble/Faceset.png')",
                 })
             )
