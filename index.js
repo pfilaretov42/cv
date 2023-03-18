@@ -352,208 +352,230 @@ const renderables = [
     foreground
 ]
 
+function activateBattle(animationId) {
+    for (const battleZone of battleZones) {
+        const overlappingArea =
+            (Math.min(player.position.x + player.width, battleZone.position.x + battleZone.width) -
+                Math.max(player.position.x, battleZone.position.x)) *
+            (Math.min(player.position.y + player.height, battleZone.position.y + battleZone.height) -
+                Math.max(player.position.y, battleZone.position.y))
+
+        if (rectangularCollision({
+                rectangle1: player,
+                rectangle2: battleZone
+            }) &&
+            overlappingArea > (player.width * player.height) / 2 &&
+            Math.random() < 0.025
+        ) {
+            // deactivate current animation loop
+            window.cancelAnimationFrame(animationId)
+
+            gsap.to('#overlappingDiv', {
+                opacity: 1,
+                repeat: 3,
+                yoyo: true,
+                duration: 0.4,
+                onComplete() {
+                    gsap.to('#overlappingDiv', {
+                        opacity: 1,
+                        duration: 0.4,
+                        onComplete() {
+                            player.interactionAsset = {
+                                // dummy dialog message for the common flow,
+                                // the content of creditsBox in index.html will be displayed
+                                dialogue: ["Press Space to continue..."],
+                                dialogueIndex: 1, // Just a single message needed here
+                                isCredits: true,
+                            }
+                            player.isInteracting = true
+
+                            document.querySelector('#creditsBox').style.display = 'block'
+
+                            document.querySelector('#characterDialogueBox').innerHTML = "Press Space to continue..."
+                            document.querySelector('#characterDialogueBox').style.display = 'flex'
+
+                            document.querySelector('#characterDialoguePortrait').style.display = 'flex'
+                            document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
+
+                            document.querySelector('#characterDialogueQrCode').style.display = 'flex'
+
+                            gsap.to('#overlappingDiv', {
+                                opacity: 0,
+                                duration: 0.4
+                            })
+                        }
+                    })
+                }
+            })
+            break
+        }
+    }
+}
+
+function moveUp() {
+    let moving = true
+    player.animate = true
+    player.image = player.sprites.up
+
+    checkForCharacterCollision({
+        characters,
+        player,
+        characterOffset: {x: 0, y: 3}
+    })
+
+    for (const boundary of boundaries) {
+        if (
+            rectangularCollision({
+                rectangle1: player,
+                rectangle2: {
+                    ...boundary,
+                    position: {
+                        x: boundary.position.x,
+                        y: boundary.position.y + 3
+                    }
+                }
+            })
+        ) {
+            moving = false
+            break
+        }
+    }
+
+    if (moving) {
+        movables.forEach((movable) => {
+            movable.position.y += 3
+        })
+    }
+}
+
+function moveLeft() {
+    let moving = true
+    player.animate = true
+    player.image = player.sprites.left
+
+    checkForCharacterCollision({
+        characters,
+        player,
+        characterOffset: {x: 3, y: 0}
+    })
+
+    for (const boundary of boundaries) {
+        if (
+            rectangularCollision({
+                rectangle1: player,
+                rectangle2: {
+                    ...boundary,
+                    position: {
+                        x: boundary.position.x + 3,
+                        y: boundary.position.y
+                    }
+                }
+            })
+        ) {
+            moving = false
+            break
+        }
+    }
+
+    if (moving) {
+        movables.forEach((movable) => {
+            movable.position.x += 3
+        })
+    }
+}
+
+function moveDown() {
+    let moving = true
+    player.animate = true
+    player.image = player.sprites.down
+
+    checkForCharacterCollision({
+        characters,
+        player,
+        characterOffset: {x: 0, y: -3}
+    })
+
+    for (const boundary of boundaries) {
+        if (
+            rectangularCollision({
+                rectangle1: player,
+                rectangle2: {
+                    ...boundary,
+                    position: {
+                        x: boundary.position.x,
+                        y: boundary.position.y - 3
+                    }
+                }
+            })
+        ) {
+            moving = false
+            break
+        }
+    }
+
+    if (moving) {
+        movables.forEach((movable) => {
+            movable.position.y -= 3
+        })
+    }
+}
+
+function moveRight() {
+    let moving = true
+    player.animate = true
+    player.image = player.sprites.right
+
+    checkForCharacterCollision({
+        characters,
+        player,
+        characterOffset: {x: -3, y: 0}
+    })
+
+    for (const boundary of boundaries) {
+        if (
+            rectangularCollision({
+                rectangle1: player,
+                rectangle2: {
+                    ...boundary,
+                    position: {
+                        x: boundary.position.x - 3,
+                        y: boundary.position.y
+                    }
+                }
+            })
+        ) {
+            moving = false
+            break
+        }
+    }
+
+    if (moving) {
+        movables.forEach((movable) => {
+            movable.position.x -= 3
+        })
+    }
+}
+
 function animate() {
     const animationId = window.requestAnimationFrame(animate)
     renderables.forEach((renderable) => {
         renderable.draw()
     })
 
-    let moving = true
     player.animate = false
 
-    // activate a battle
     if (keys.up.pressed || keys.left.pressed || keys.down.pressed || keys.right.pressed) {
-        for (const battleZone of battleZones) {
-            const overlappingArea =
-                (Math.min(player.position.x + player.width, battleZone.position.x + battleZone.width) -
-                    Math.max(player.position.x, battleZone.position.x)) *
-                (Math.min(player.position.y + player.height, battleZone.position.y + battleZone.height) -
-                    Math.max(player.position.y, battleZone.position.y))
-
-            if (rectangularCollision({
-                    rectangle1: player,
-                    rectangle2: battleZone
-                }) &&
-                overlappingArea > (player.width * player.height) / 2 &&
-                Math.random() < 0.03
-            ) {
-                // deactivate current animation loop
-                window.cancelAnimationFrame(animationId)
-
-                gsap.to('#overlappingDiv', {
-                    opacity: 1,
-                    repeat: 3,
-                    yoyo: true,
-                    duration: 0.4,
-                    onComplete() {
-                        gsap.to('#overlappingDiv', {
-                            opacity: 1,
-                            duration: 0.4,
-                            onComplete() {
-                                player.interactionAsset = {
-                                    // dummy dialog message for the common flow,
-                                    // the content of creditsBox in index.html will be displayed
-                                    dialogue: ["Press Space to continue..."],
-                                    dialogueIndex: 1, // Just a single message needed here
-                                    isCredits: true,
-                                }
-                                player.isInteracting = true
-
-                                document.querySelector('#creditsBox').style.display = 'block'
-
-                                document.querySelector('#characterDialogueBox').innerHTML = "Press Space to continue..."
-                                document.querySelector('#characterDialogueBox').style.display = 'flex'
-
-                                document.querySelector('#characterDialoguePortrait').style.display = 'flex'
-                                document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
-
-                                document.querySelector('#characterDialogueQrCode').style.display = 'flex'
-
-                                gsap.to('#overlappingDiv', {
-                                    opacity: 0,
-                                    duration: 0.4
-                                })
-                            }
-                        })
-                    }
-                })
-                break
-            }
-        }
+        activateBattle(animationId)
     }
 
     if (keys.up.pressed && lastKey === KeysPressed.UP) {
-        player.animate = true
-        player.image = player.sprites.up
-
-        checkForCharacterCollision({
-            characters,
-            player,
-            characterOffset: {x: 0, y: 3}
-        })
-
-        for (const boundary of boundaries) {
-            if (
-                rectangularCollision({
-                    rectangle1: player,
-                    rectangle2: {
-                        ...boundary,
-                        position: {
-                            x: boundary.position.x,
-                            y: boundary.position.y + 3
-                        }
-                    }
-                })
-            ) {
-                moving = false
-                break
-            }
-        }
-
-        if (moving) {
-            movables.forEach((movable) => {
-                movable.position.y += 3
-            })
-        }
+        moveUp()
     } else if (keys.left.pressed && lastKey === KeysPressed.LEFT) {
-        player.animate = true
-        player.image = player.sprites.left
-
-        checkForCharacterCollision({
-            characters,
-            player,
-            characterOffset: {x: 3, y: 0}
-        })
-
-        for (const boundary of boundaries) {
-            if (
-                rectangularCollision({
-                    rectangle1: player,
-                    rectangle2: {
-                        ...boundary,
-                        position: {
-                            x: boundary.position.x + 3,
-                            y: boundary.position.y
-                        }
-                    }
-                })
-            ) {
-                moving = false
-                break
-            }
-        }
-
-        if (moving) {
-            movables.forEach((movable) => {
-                movable.position.x += 3
-            })
-        }
+        moveLeft()
     } else if (keys.down.pressed && lastKey === KeysPressed.DOWN) {
-        player.animate = true
-        player.image = player.sprites.down
-
-        checkForCharacterCollision({
-            characters,
-            player,
-            characterOffset: {x: 0, y: -3}
-        })
-
-        for (const boundary of boundaries) {
-            if (
-                rectangularCollision({
-                    rectangle1: player,
-                    rectangle2: {
-                        ...boundary,
-                        position: {
-                            x: boundary.position.x,
-                            y: boundary.position.y - 3
-                        }
-                    }
-                })
-            ) {
-                moving = false
-                break
-            }
-        }
-
-        if (moving) {
-            movables.forEach((movable) => {
-                movable.position.y -= 3
-            })
-        }
+        moveDown()
     } else if (keys.right.pressed && lastKey === KeysPressed.RIGHT) {
-        player.animate = true
-        player.image = player.sprites.right
-
-        checkForCharacterCollision({
-            characters,
-            player,
-            characterOffset: {x: -3, y: 0}
-        })
-
-        for (const boundary of boundaries) {
-            if (
-                rectangularCollision({
-                    rectangle1: player,
-                    rectangle2: {
-                        ...boundary,
-                        position: {
-                            x: boundary.position.x - 3,
-                            y: boundary.position.y
-                        }
-                    }
-                })
-            ) {
-                moving = false
-                break
-            }
-        }
-
-        if (moving) {
-            movables.forEach((movable) => {
-                movable.position.x -= 3
-            })
-        }
+        moveRight()
     }
 }
 
