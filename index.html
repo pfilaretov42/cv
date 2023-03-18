@@ -10,135 +10,28 @@
     rel="stylesheet"
   />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" type="text/css" href="css/cv.css" />
+  <link rel="stylesheet" type="text/css" href="cv.css" />
 </head>
 
 <body>
 <div style="display: inline-block; position: relative">
-  <div
-    id="overlappingDiv"
-    style="
-          background-color: black;
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          opacity: 0;
-          pointer-events: none;
-          z-index: 10;
-        "
-  ></div>
-
+  <div id="overlappingDiv" class="overlappingDiv"></div>
   <canvas></canvas>
-  <div
-    id="characterDialoguePortrait"
-    style="
-          background-color: black;
-          background-image: url('img/cavegirl/Faceset.png');
-          background-repeat: no-repeat;
-          background-size: contain;
-          height: 140px;
-          width: 140px;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          border-top: 4px black solid;
-          display: flex;
-          padding: 12px;
-        "
-  ></div>
-  <div
-    id="characterDialogueBox"
-    style="
-          background-color: whitesmoke;
-          height: 140px;
-          position: absolute;
-          bottom: 0;
-          left: 140px;
-          right: 140px;
-          border-top: 4px black solid;
-          display: flex;
-          padding: 5px 12px 12px;
-          line-height: 1.5;
-        "
-  >Welcome to the resume of Petr Filaretov!
+
+  <div id="characterDialoguePortrait" class="characterDialoguePortrait"></div>
+  <div id="characterDialogueBox" class="characterDialogueBox">
+    Welcome to the resume of Petr Filaretov!
   </div>
-
-  <div
-    id="characterPressSpaceBox"
-    style="
-          background-color: whitesmoke;
-          font-size: 11px;
-          height: 15px;
-          position: absolute;
-          bottom: 5px;
-          left: 140px;
-          right: 140px;
-          display: flex;
-          padding: 12px;
-        "
-  >Press Space to continue...
+  <div id="characterPressSpaceBox" class="characterPressSpaceBox">
+    Press Space to continue...
   </div>
+  <div id="characterDialogueQrCode" class="characterDialogueQrCode"></div>
 
-  <div
-    id="characterDialogueAddonImage"
-    style="
-          background-color: black;
-          background-image: url('img/qr-smoke.png');
-          background-repeat: no-repeat;
-          background-size: contain;
-          height: 140px;
-          width: 140px;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          border-top: 4px black solid;
-          display: flex;
-          padding: 12px;
-        "
-  ></div>
-
-  <div
-    id="creditsBox"
-    style="
-          background-color: black;
-          background-image: url('img/battle/bg7.png');
-          color: whitesmoke;
-          position: absolute;
-          top: 0;
-          bottom: 140px;
-          right: 0;
-          left: 0;
-          display: none;
-          padding: 12px;
-        "
-  >
-    <div
-      id="creditsHeader"
-      style="
-            background-color: black;
-            background-image: url('img/battle/bg7.png');
-            color: whitesmoke;
-            padding: 12px;
-            margin-left:auto;
-            margin-right:auto;
-            text-align: center;
-          "
-    >
+  <div id="creditsBox" class="creditsBox">
+    <div id="creditsHeader" class="creditsHeader">
       Credits
     </div>
-
-    <div
-      id="creditsBody"
-      style="
-            background-color: black;
-            background-image: url('img/battle/bg7.png');
-            color: whitesmoke;
-            padding: 12px;
-            line-height: 1.5;
-          "
-    >
+    <div id="creditsBody" class="creditsBody">
       <p>Hi,</p>
       <p>Thank you for taking a tour of my resume!</p>
       <p>This site is created by my own two hands with the help of StackOverflow, my cat, and a lot of Malaysian

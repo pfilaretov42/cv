@@ -1,0 +1,119 @@
+* {
+    font-family: "Press Start 2P", cursive;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    background-color: black;
+}
+
+.overlappingDiv {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.characterDialoguePortrait {
+    background-color: black;
+    background-image: url('img/cavegirl/Faceset.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 4px black solid;
+    display: flex;
+    padding: 12px;
+}
+
+.characterDialogueBox {
+    background-color: whitesmoke;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    left: 140px;
+    right: 140px;
+    border-top: 4px black solid;
+    display: flex;
+    padding: 5px 12px 12px;
+    line-height: 1.5;
+}
+
+.characterPressSpaceBox {
+    background-color: whitesmoke;
+    font-size: 11px;
+    height: 15px;
+    position: absolute;
+    bottom: 5px;
+    left: 140px;
+    right: 140px;
+    display: flex;
+    padding: 12px;
+}
+
+.characterDialogueQrCode {
+    background-color: black;
+    background-image: url('img/qr-smoke.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 140px;
+    width: 140px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-top: 4px black solid;
+    display: flex;
+    padding: 12px;
+}
+
+.creditsBox {
+    background-color: black;
+    background-image: url('img/battle/bg7.png');
+    color: whitesmoke;
+    position: absolute;
+    top: 0;
+    bottom: 140px;
+    right: 0;
+    left: 0;
+    display: none;
+    padding: 12px;
+}
+
+.creditsHeader {
+    background-color: black;
+    background-image: url('img/battle/bg7.png');
+    color: whitesmoke;
+    padding: 12px;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.creditsBody {
+    background-color: black;
+    background-image: url('img/battle/bg7.png');
+    color: whitesmoke;
+    padding: 12px;
+    line-height: 1.5;
+}
+
+.bestRegardsLine1 {
+    margin-bottom: 0;
+}
+
+.bestRegardsLine2 {
+    margin-top: 0;
+}

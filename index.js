@@ -380,7 +380,7 @@ function animate() {
                     rectangle2: battleZone
                 }) &&
                 overlappingArea > (player.width * player.height) / 2 &&
-                Math.random() < 0.05
+                Math.random() < 0.03
             ) {
                 // deactivate current animation loop
                 window.cancelAnimationFrame(animationId)
@@ -412,7 +412,7 @@ function animate() {
                                 document.querySelector('#characterDialoguePortrait').style.display = 'flex'
                                 document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
 
-                                document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
+                                document.querySelector('#characterDialogueQrCode').style.display = 'flex'
 
                                 gsap.to('#overlappingDiv', {
                                     opacity: 0,
@@ -582,7 +582,7 @@ window.addEventListener('keydown', (e) => {
                     document.querySelector('#characterDialogueBox').innerHTML =
                         player.interactionAsset.dialogue[dialogueIndex]
                     document.querySelector('#characterPressSpaceBox').style.display = 'flex'
-                    document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
+                    document.querySelector('#characterDialogueQrCode').style.display = 'flex'
                     return
                 }
 
@@ -592,7 +592,7 @@ window.addEventListener('keydown', (e) => {
                 document.querySelector('#characterDialogueBox').style.display = 'none'
                 document.querySelector('#characterDialoguePortrait').style.display = 'none'
                 document.querySelector('#characterPressSpaceBox').style.display = 'none'
-                document.querySelector('#characterDialogueAddonImage').style.display = 'none'
+                document.querySelector('#characterDialogueQrCode').style.display = 'none'
 
                 if (player.interactionAsset.isCredits === true) {
                     // finish credits
@@ -621,7 +621,7 @@ window.addEventListener('keydown', (e) => {
             document.querySelector('#characterDialoguePortrait').style.backgroundImage = player.interactionAsset.portrait
 
             document.querySelector('#characterPressSpaceBox').style.display = 'flex'
-            document.querySelector('#characterDialogueAddonImage').style.display = 'flex'
+            document.querySelector('#characterDialogueQrCode').style.display = 'flex'
 
             player.isInteracting = true
             break
