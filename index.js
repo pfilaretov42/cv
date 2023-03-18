@@ -1,6 +1,3 @@
-// TODO - update credits: site created by Petr Filaretov, thanks to asset providers (links),
-//  I cannot thank enough my mom, dad, uncle, wife, and everyone who made real, supported myself and continue to do so on this exciting journey
-//  of software development
 // TODO - update characters' texts
 // TODO - fix performance? crop map?
 // TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
@@ -103,8 +100,6 @@ masterNoDialogImg.src = './img/master/IdleNoDialog.png'
 const masterWithDialogImg = new Image()
 masterWithDialogImg.src = './img/master/IdleWithDialog.png'
 
-// TODO - add characters' portrait in the interaction box
-// ToDO - villager3, noble, etc - cut 1 pixel? there is a border
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
         // 2108 === villager

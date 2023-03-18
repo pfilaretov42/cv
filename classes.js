@@ -1,12 +1,10 @@
 class Sprite {
     constructor({
                     position,
-                    velocity,
                     image,
                     frames = {max: 1, hold: 10},
                     sprites,
                     animate = false,
-                    rotation = 0,
                     scale = 1,
                     isInteracting = false,
                     interactionAsset = null,
@@ -24,7 +22,6 @@ class Sprite {
         this.sprites = sprites
         this.opacity = 1
 
-        this.rotation = rotation
         this.scale = scale
         this.isInteracting = isInteracting
         this.interactionAsset = interactionAsset
@@ -32,15 +29,6 @@ class Sprite {
 
     draw() {
         c.save()
-        c.translate(
-            this.position.x + this.width / 2,
-            this.position.y + this.height / 2
-        )
-        c.rotate(this.rotation)
-        c.translate(
-            -this.position.x - this.width / 2,
-            -this.position.y - this.height / 2
-        )
         c.globalAlpha = this.opacity
 
         const crop = {
@@ -113,12 +101,10 @@ class Boundary {
 class Character extends Sprite {
     constructor({
                     position,
-                    velocity,
                     image,
                     frames = {max: 1, hold: 10},
                     sprites,
                     animate = false,
-                    rotation = 0,
                     scale = 1,
                     dialogue = [''],
                     noDialogImage = image,
@@ -127,12 +113,10 @@ class Character extends Sprite {
                 }) {
         super({
             position,
-            velocity,
             image,
             frames,
             sprites,
             animate,
-            rotation,
             scale
         })
 
