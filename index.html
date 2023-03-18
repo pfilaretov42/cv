@@ -1,185 +1,178 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <title>@pfilaretov42 | Resume of Petr Filaretov</title>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link
     href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
     rel="stylesheet"
   />
-  <style>
-      * {
-          font-family: "Press Start 2P", cursive;
-          box-sizing: border-box;
-      }
-
-      html, body {
-        margin: 0 !important;
-        padding: 0 !important;
-      }
-
-      body {
-          background-color: black;
-      }
-
-      h1 {
-          margin: 0;
-      }
-
-      button {
-          border: 0;
-          cursor: pointer;
-          font-size: 16px;
-      }
-
-      button:hover {
-          background-color: #ddd;
-      }
-  </style>
-  <title>@pfilaretov42 | Resume of Petr Filaretov</title>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    * {
+      font-family: "Press Start 2P", cursive;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    .bestRegardsLine1 {
+      margin-bottom: 0;
+    }
+    .bestRegardsLine2 {
+      margin-top: 0;
+    }
+  </style>
 </head>
 
+<body>
 <div style="display: inline-block; position: relative">
   <div
     id="overlappingDiv"
     style="
-      background-color: black;
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 0;
-      pointer-events: none;
-      z-index: 10;
-    "
+          background-color: black;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          opacity: 0;
+          pointer-events: none;
+          z-index: 10;
+        "
   ></div>
 
   <canvas></canvas>
   <div
     id="characterDialoguePortrait"
     style="
-      background-color: black;
-      background-image: url('img/cavegirl/Faceset.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 140px;
-      width: 140px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-top: 4px black solid;
-      display: flex;
-      padding: 12px;
-    "
+          background-color: black;
+          background-image: url('img/cavegirl/Faceset.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 140px;
+          width: 140px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          border-top: 4px black solid;
+          display: flex;
+          padding: 12px;
+        "
   ></div>
   <div
     id="characterDialogueBox"
     style="
-      background-color: whitesmoke;
-      height: 140px;
-      position: absolute;
-      bottom: 0;
-      left: 140px;
-      right: 140px;
-      border-top: 4px black solid;
-      display: flex;
-      padding: 5px 12px 12px;
-      line-height: 1.5;
-    "
-  >Welcome to the resume of Petr Filaretov!</div>
+          background-color: whitesmoke;
+          height: 140px;
+          position: absolute;
+          bottom: 0;
+          left: 140px;
+          right: 140px;
+          border-top: 4px black solid;
+          display: flex;
+          padding: 5px 12px 12px;
+          line-height: 1.5;
+        "
+  >Welcome to the resume of Petr Filaretov!
+  </div>
 
   <div
     id="characterPressSpaceBox"
     style="
-      background-color: whitesmoke;
-      font-size: 11px;
-      height: 15px;
-      position: absolute;
-      bottom: 5px;
-      left: 140px;
-      right: 140px;
-      display: flex;
-      padding: 12px;
-    "
-  >Press Space to continue...</div>
+          background-color: whitesmoke;
+          font-size: 11px;
+          height: 15px;
+          position: absolute;
+          bottom: 5px;
+          left: 140px;
+          right: 140px;
+          display: flex;
+          padding: 12px;
+        "
+  >Press Space to continue...
+  </div>
 
   <div
     id="characterDialogueAddonImage"
     style="
-      background-color: black;
-      background-image: url('img/qr-smoke.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      height: 140px;
-      width: 140px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      border-top: 4px black solid;
-      display: flex;
-      padding: 12px;
-    "
+          background-color: black;
+          background-image: url('img/qr-smoke.png');
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 140px;
+          width: 140px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          border-top: 4px black solid;
+          display: flex;
+          padding: 12px;
+        "
   ></div>
 
   <div
     id="creditsBox"
     style="
-      background-color: black;
-      background-image: url('img/battle/bg7.png');
-      /*color: #f1e6d6;*/
-      color: whitesmoke;
-      position: absolute;
-      top: 0;
-      bottom: 140px;
-      right: 0;
-      left: 0;
-      display: none;
-      padding: 12px;
-    "
+          background-color: black;
+          background-image: url('img/battle/bg7.png');
+          color: whitesmoke;
+          position: absolute;
+          top: 0;
+          bottom: 140px;
+          right: 0;
+          left: 0;
+          display: none;
+          padding: 12px;
+        "
   >
     <div
       id="creditsHeader"
       style="
-        background-color: black;
-        background-image: url('img/battle/bg7.png');
-        color: whitesmoke;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        height: 140px;
-        display: flex;
-        padding: 12px;
-      "
+            background-color: black;
+            background-image: url('img/battle/bg7.png');
+            color: whitesmoke;
+            padding: 12px;
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+          "
     >
-<!--     TODO - align to center -->
       Credits
     </div>
 
     <div
-            id="creditsBody"
-            style="
-        background-color: black;
-        background-image: url('img/battle/bg7.png');
-        color: whitesmoke;
-        position: absolute;
-        top: 140px;
-        right: 0;
-        left: 0;
-        display: flex;
-        padding: 12px;
-      "
+      id="creditsBody"
+      style="
+            background-color: black;
+            background-image: url('img/battle/bg7.png');
+            color: whitesmoke;
+            padding: 12px;
+            line-height: 1.5;
+          "
     >
-      I cannot thank enough my mom, dad, uncle, wife, and everyone who
-      supported myself and continue to do so on this exciting journey of software development.
-      <br><br>
-      thanks to asset providers (links)
-      <br><br>
-      This site is created by Petr Filaretov.
+      <p>Hi,</p>
+      <p>Thank you for taking a tour of my resume!</p>
+      <p>This site is created by my own two hands with the help of StackOverflow, my cat, and a lot of Malaysian
+        tea.</p>
+      <p>I also cannot thank enough my ma, dad, uncle, wife, and everyone else who helped me to become professional in
+        things that I love doing and always supported me on this exciting journey of software development.</p>
+
+      <p class="bestRegardsLine1">Best regards,</p>
+      <p class="bestRegardsLine2">Petr</p>
     </div>
   </div>
 </div>
+
 <script
   src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
   integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
@@ -187,3 +180,5 @@
   referrerpolicy="no-referrer"
 ></script>
 <script src="cv.min.js"></script>
+</body>
+</html>

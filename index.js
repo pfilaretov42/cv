@@ -6,7 +6,7 @@
 // TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
 // TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 //  What if the width is too high? player is not in the center as well
-// TODO - make dialogbox background color = 'whitesmoke', but then generate QR with the same background
+//  make canvas smaller?
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -380,7 +380,7 @@ function animate() {
                     rectangle2: battleZone
                 }) &&
                 overlappingArea > (player.width * player.height) / 2 &&
-                Math.random() < 0.01
+                Math.random() < 0.05
             ) {
                 // deactivate current animation loop
                 window.cancelAnimationFrame(animationId)
@@ -404,7 +404,7 @@ function animate() {
                                 }
                                 player.isInteracting = true
 
-                                document.querySelector('#creditsBox').style.display = 'flex'
+                                document.querySelector('#creditsBox').style.display = 'block'
 
                                 document.querySelector('#characterDialogueBox').innerHTML = "Press Space to continue..."
                                 document.querySelector('#characterDialogueBox').style.display = 'flex'
