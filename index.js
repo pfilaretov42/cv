@@ -102,8 +102,8 @@ masterWithDialogImg.src = './img/master/IdleWithDialog.png'
 
 charactersMap.forEach((row, i) => {
     row.forEach((symbol, j) => {
-        // 2108 === villager
-        if (symbol === 2108) {
+        // villager
+        if (symbol === 1053) {
             characters.push(
                 new Character({
                     position: {
@@ -123,8 +123,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 2136 === boy
-        else if (symbol === 2136) {
+        // boy
+        else if (symbol === 1081) {
             characters.push(
                 new Character({
                     position: {
@@ -144,8 +144,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 2080 === oldMan
-        else if (symbol === 2080) {
+        // oldMan
+        else if (symbol === 1025) {
             characters.push(
                 new Character({
                     position: {
@@ -165,8 +165,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 3287 === villager3
-        else if (symbol === 3287) {
+        // villager3
+        else if (symbol === 2232) {
             characters.push(
                 new Character({
                     position: {
@@ -186,8 +186,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 3259 === noble
-        else if (symbol === 3259) {
+        // noble
+        else if (symbol === 2204) {
             characters.push(
                 new Character({
                     position: {
@@ -207,8 +207,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 3203 === greenman
-        else if (symbol === 3203) {
+        // greenman
+        else if (symbol === 2148) {
             characters.push(
                 new Character({
                     position: {
@@ -228,8 +228,8 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // 3231 === master
-        else if (symbol === 3231) {
+        // master
+        else if (symbol === 2176) {
             characters.push(
                 new Character({
                     position: {

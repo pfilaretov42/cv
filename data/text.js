@@ -40,7 +40,7 @@ const educationTexts = [
 ]
 
 const contactsTexts = [
-    'Use the links below or the QR code on the right-hand side and take a look at the posts and notes Petr is sharing via the following platforms:',
+    'Use the links below or the QR code on the right-hand side and take a look at the content Petr is sharing via the following platforms:',
     "<a href=\"https://www.linkedin.com/in/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ LinkedIn</a>",
     "<a href=\"https://dev.to/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ dev.to</a>",
     "<a href=\"https://github.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ GitHub</a>",

@@ -6,15 +6,13 @@
 
 - Export new map as image
   - Turn off layers
-    - Foreground objects
-    - Special zone marker
-    - Collisions marker
-    - Characters
+    - "Foreground objects"
+    - "Not for background image"
   - Turn other layers on
   - Zoom to expected level (400%)
   - File > Export as image > Save to `img/cv-infinite.png`
 - Export foreground objects as image
-  - Turn off all the layers but Foreground objects
+  - Turn off all the layers but "Foreground objects"
   - Zoom to expected level (400%)
   - File > Export as image > Save to `img/foregroundObjects.png`
 - Export data

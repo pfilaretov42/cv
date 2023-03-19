@@ -77,7 +77,7 @@ class Sprite {
 }
 
 class Map {
-    static WIDTH_TILES = 169
+    static WIDTH_TILES = 130
     static TILE_SIZE = 12
     static ZOOM = 4
 }
