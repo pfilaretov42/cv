@@ -1,9 +1,9 @@
-// TODO - update characters' texts
+// TODO - add resume as PDF - to be able to download it, add to QR code and to the character text (you can download the full resume here)
 // TODO - fix performance? crop map?
 // TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
-// TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 //  What if the width is too high? player is not in the center as well
 //  make canvas smaller?
+// TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
@@ -202,7 +202,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: okkoExperienceTexts,
+                    dialogue: okkoTexts,
                     portrait: "url('img/noble/Faceset.png')",
                 })
             )
@@ -223,7 +223,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [epamExperienceText1, epamExperienceText2],
+                    dialogue: epamTexts,
                     portrait: "url('img/greenMan/Faceset.png')",
                 })
             )
@@ -244,7 +244,7 @@ charactersMap.forEach((row, i) => {
                     },
                     scale: 3,
                     animate: true,
-                    dialogue: [bccExperienceText1, bccExperienceText2],
+                    dialogue: bccTexts,
                     portrait: "url('img/master/Faceset.png')",
                 })
             )

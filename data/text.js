@@ -6,12 +6,12 @@ const welcomeTexts = [
 
 const summaryTexts = [
     'Hi, here is a quick summary about Petr:',
-    'Lead Software Engineer with technical experience in enterprise solutions, including cloud platforms.',
+    'Senior Software Engineer with technical experience in enterprise solutions, including cloud platforms.',
     '14 years of hands-on experience in IT.',
     'AWS Certified Solutions Architect Associate.',
     'Participation in the full life cycle of software development projects.',
     'Domain areas include FinTech, Life Science, Media, Housing and Utilities Sector, Telecommunication, and Education.',
-    'Advanced in application development using java/kotlin and Spring.',
+    'Expert in application development using java, kotlin, and Spring.',
     'Working with both SQL and NoSQL databases.',
     'Problem isolation and analysis.',
     'Environment and CI/CD pipeline configurations.',
@@ -47,13 +47,20 @@ const contactsTexts = [
     "<a href=\"https://twitter.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ Twitter</a>",
 ]
 
-const okkoExperienceTexts = [
-    'Working in okko'
+const okkoTexts = [
+    "Since June 2022 till now Petr is working at&nbsp;<a href=\"https://okko.tv\" target=\"_blank\" rel=\"noopener noreferrer\">Okko</a>.",
+    'Contribution: technical leadership of 2 projects.',
+    'Environment: Java 11, Kotlin, Spring, Spring Boot, RabbitMQ, Kafka, Neo4j, PostgreSQL, Gradle, Docker, Helm, Kubernetes, Jenkins.',
 ]
 
-const epamExperienceText1 = 'Worked at EPAM for about 5 years'
-const epamExperienceText2 = 'EWB and others'
+const epamTexts = [
+    "From August 2017 to June 2022 Petr worked at&nbsp;<a href=\"https://epam.com\" target=\"_blank\" rel=\"noopener noreferrer\">EPAM</a>.",
+    'Contribution: technical leadership of 6 projects, developer in 1 project.',
+    'Environment: Java 8/11, Groovy, Spring, Spring Boot, RabbitMQ, AWS, Oracle, Gradle, Maven, Docker, Helm, Kubernetes, Jenkins, SonarQube.',
+]
 
-const bccExperienceText1 = 'Worked at bcc from ... till ...'
-const bccExperienceText2 = 'Telecom and Communal Services'
-
+const bccTexts = [
+    "From September 2008 to August 2017 Petr worked at&nbsp;<a href=\"https://bcc.ru\" target=\"_blank\" rel=\"noopener noreferrer\">bcc</a>.",
+    'Contribution: technical leadership of 1 project, developer in 2 projects.',
+    'Environment: Java 6/7, Java EE, Java Servlets, JSP, Spring, HornetQ, PostgreSQL, Oracle, Apache Tiles, Maven, TeamCity, Apache Tomcat, JBoss.'
+]
