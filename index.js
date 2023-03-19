@@ -1,4 +1,3 @@
-// TODO - add resume as PDF - to be able to download it, add to QR code and to the character text (you can download the full resume here)
 // TODO - fix performance? crop map?
 // TODO - if the width of the screen is too low, the player is not in the center and text blocks are bad.
 //  What if the width is too high? player is not in the center as well
