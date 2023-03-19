@@ -3,6 +3,7 @@
 //  What if the width is too high? player is not in the center as well
 //  make canvas smaller?
 // TODO - to think - not all the text is displayed at once, so it may be hard to read/remember
+// TODO - check how to make link preview available, when sharing site link
 
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
