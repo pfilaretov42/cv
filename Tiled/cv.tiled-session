@@ -3,15 +3,36 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "cv.tmx",
+    "activeFile": "cv-infinite.tmx",
     "expandedProjectPaths": [
     ],
     "exportAsImage.useCurrentScale": true,
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
+        "ChrisCourses/BattleZoneTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/BoyTileset.tsx": {
+            "scaleInDock": 1
+        },
         "ChrisCourses/CowTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "ChrisCourses/DeerTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/FoxTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/GreenmanTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/MasterTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/OldmanTileset.tsx": {
+            "scaleInDock": 1
         },
         "ChrisCourses/Pellet Town.tmx": {
             "expandedGroupLayers": [
@@ -32,22 +53,36 @@
             "scaleInDock": 1.3867,
             "scaleInEditor": 1
         },
+        "ChrisCourses/Villager3Tileset.tsx": {
+            "scaleInDock": 1
+        },
         "ChrisCourses/VillagerTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ChrisCourses/collisionTileset.tsx": {
+            "scaleInDock": 1
+        },
+        "ChrisCourses/cv-infinite.tsx": {
+            "scaleInDock": 1
+        },
         "ChrisCourses/pokemonStyleGameTileset.tsx": {
             "scaleInDock": 1.978
         },
+        "ChrisCourses/tileset-bridge-45.tsx": {
+            "scaleInDock": 1
+        },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
+                65,
+                66,
                 17
             ],
-            "scale": 4,
-            "selectedLayer": 14,
+            "scale": 0.7082,
+            "selectedLayer": 76,
             "viewCenter": {
-                "x": 626.25,
-                "y": 994.625
+                "x": 564.1061846935894,
+                "y": 732.1378141767862
             }
         },
         "cv.tmx": {
@@ -74,18 +109,19 @@
     "map.width": 70,
     "openFiles": [
         "cv.tsx",
-        "cv.tmx"
+        "cv.tmx",
+        "cv-infinite.tmx"
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "cv.tsx",
+        "cv.tmx",
+        "cv-infinite.tmx",
         "ChrisCourses/CowTileset.tsx",
         "ChrisCourses/Pellet Town.tmx",
-        "cv.tmx",
         "ChrisCourses/TilesetWater.tsx",
         "ChrisCourses/RabbitTileset.tsx",
-        "cv-infinite.tmx",
-        "ChrisCourses/VillagerTileset.tsx",
-        "cv.tsx"
+        "ChrisCourses/VillagerTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
