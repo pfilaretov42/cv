@@ -56,5 +56,6 @@ const epamTexts = [
 const bccTexts = [
     "From September 2008 to August 2017 Petr worked at&nbsp;<a href=\"https://bcc.ru\" target=\"_blank\" rel=\"noopener noreferrer\">bcc</a>.",
     'TL;DR: technical leadership of 1 project, developer in 2 projects.',
-    'Environment: Java 6/7, Java EE, Java Servlets, JSP, Spring, HornetQ, PostgreSQL, Oracle, Apache Tiles, Maven, TeamCity, Apache Tomcat, JBoss.'
+    'Environment: Java 6/7, Java EE, Java Servlets, JSP, Spring, HornetQ, PostgreSQL, Oracle, Apache Tiles, Maven, TeamCity, Apache Tomcat, JBoss.',
+    'This is it for now. Thanks for coming by!',
 ]
