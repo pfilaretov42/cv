@@ -11,7 +11,7 @@ const summaryTexts = [
     'Proficient in backend development with Java, Kotlin, and Spring.',
     'Recognized by Amazon as AWS Certified Solutions Architect Associate.',
     'Experienced with the environment and CI/CD pipeline configurations.',
-    'Striving for excellence in every aspect of the software development lifecycle.',
+    'Always striving for excellence.',
 ]
 
 const skillsTexts = [
