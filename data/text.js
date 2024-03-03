@@ -6,7 +6,7 @@ const welcomeTexts = [
 
 const summaryTexts = [
     'Hi, here is a quick summary about Petr:',
-    'Passionate software engineer with over 14 years of hands-on experience in IT focused on delivering high-quality products on time.',
+    'Passionate software engineer with 15 years of hands-on experience in IT focused on delivering high-quality products on time.',
     'Known for strong technical leadership skills.',
     'Proficient in backend development with Java, Kotlin, and Spring.',
     'Recognized by Amazon as AWS Certified Solutions Architect Associate.',
@@ -17,10 +17,10 @@ const summaryTexts = [
 const skillsTexts = [
     'Petr\'s key skills include the following:',
     'Programming languages: Java, Kotlin, Groovy, SQL.',
-    'Frameworks and libraries: Spring, Spring Boot, Spring Data, Spring Security, Lombok, mapstruct, Liquibase, MyBatis, junit, Mockito, mockk, slf4j, Swagger, Google Guice.',
+    'Frameworks and libraries: Spring, Spring Boot, Spring Data, Spring Security, Lombok, mapstruct, Liquibase, MyBatis, junit, Mockito, mockk, Google Guice.',
     'Cloud: Amazon Web Services, AWS SDK.',
     'Message brokers: Kafka, RabbitMQ.',
-    'Development infrastructure: Gradle, Maven, Jenkins, Git, SVN, spotbugs, checkstyle, jacoco, SonarQube, detekt, Docker, Kubernetes, Helm, Prometheus, Grafana, BlackDuck, Veracode.',
+    'Development infrastructure: Gradle, Maven, Jenkins, Git, spotbugs, checkstyle, jacoco, SonarQube, detekt, Docker, Kubernetes, Helm, Prometheus, Grafana, BlackDuck, Veracode.',
     'Databases: PostgreSQL, Oracle, Neo4j.',
     'Methodologies: Scrum, Kanban.',
 ]
@@ -43,7 +43,7 @@ const contactsTexts = [
 
 const okkoTexts = [
     "Since June 2022 till now Petr is working at&nbsp;<a href=\"https://okko.tv\" target=\"_blank\" rel=\"noopener noreferrer\">Okko</a>.",
-    'TL;DR: technical leadership of 2 projects.',
+    'TL;DR: technical leadership of 1 project, developer in 1 project.',
     'Environment: Java 11/17, Kotlin, Spring, Spring Boot, RabbitMQ, Kafka, Neo4j, PostgreSQL, ClickHouse, Gradle, Docker, Helm, Kubernetes, Vault, Jenkins.',
 ]
 

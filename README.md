@@ -33,9 +33,20 @@
 - run `terser-minifier.js` in Idea
 - result is saved to `cv.min.js`
 
-# Deploy
+# Deploying
 
 [How to deploy with Github Pages](https://pages.github.com/)
+
+## How to release changes
+
+- Checkout `master` branch
+- Make changes to source code
+- Minify JS - [see above](#how-to-minify-js)
+- Open `index.html` in a browser to check changes
+- Commit changes to `master`
+- Merge `master` branch into `release` branch
+- Push `release` branch - GitHub Actions will trigger the build and deploy
+- Check changes on the site: https://cv.pfilaretov42.dev
 
 # Links
 
