@@ -43,9 +43,10 @@
 - Make changes to source code
 - Minify JS - [see above](#how-to-minify-js)
 - Open `index.html` in a browser to check changes
-- Commit changes to `master`
-- Merge `master` branch into `release` branch
-- Push `release` branch - GitHub Actions will trigger the build and deploy
+- Commit and push changes to `master`
+- Checkout `release` branch
+- Merge `master` branch into `release` branch. Accept "yours" changes on conflicts where files are deleted in `release` branch and modified in `master` branch.
+- Push `release` branch - GitHub Actions will trigger the build and deploy it.
 - Check changes on the site: https://cv.pfilaretov42.dev
 
 # Links
