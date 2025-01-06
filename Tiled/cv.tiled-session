@@ -13,26 +13,31 @@
             "scaleInDock": 1
         },
         "ChrisCourses/BoyTileset.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ChrisCourses/CowTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
         "ChrisCourses/DeerTileset.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ChrisCourses/FoxTileset.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ChrisCourses/GreenmanTileset.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ChrisCourses/MasterTileset.tsx": {
             "scaleInDock": 1
         },
         "ChrisCourses/OldmanTileset.tsx": {
-            "scaleInDock": 1
+            "scaleInDock": 1,
+            "scaleInEditor": 1
         },
         "ChrisCourses/Pellet Town.tmx": {
             "expandedGroupLayers": [
@@ -74,23 +79,23 @@
         },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
-                65,
                 66,
-                17
+                17,
+                65
             ],
-            "scale": 0.7082,
+            "scale": 1.64,
             "selectedLayer": 76,
             "viewCenter": {
-                "x": 564.1061846935894,
-                "y": 732.1378141767862
+                "x": 774.0853658536585,
+                "y": 625.609756097561
             }
         },
         "cv.tmx": {
-            "scale": 2.4396,
+            "scale": 0.7123,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 419.94589276930645,
-                "y": 239.99836038694866
+                "x": 522.9538115962375,
+                "y": 499.78941457251153
             }
         },
         "cv.tsx": {
@@ -99,7 +104,7 @@
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/p.filaretov/IdeaProjects/cv/tileset/NinjaAdventure/Actor/Characters/Villager3",
+    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/Animal-asset-pack-02-by-pixel-Predator",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -114,14 +119,18 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "ChrisCourses/GreenmanTileset.tsx",
+        "ChrisCourses/VillagerTileset.tsx",
+        "ChrisCourses/OldmanTileset.tsx",
+        "ChrisCourses/BoyTileset.tsx",
+        "ChrisCourses/CowTileset.tsx",
+        "ChrisCourses/DeerTileset.tsx",
+        "ChrisCourses/FoxTileset.tsx",
+        "ChrisCourses/RabbitTileset.tsx",
+        "cv-infinite.tmx",
         "cv.tsx",
         "cv.tmx",
-        "cv-infinite.tmx",
-        "ChrisCourses/CowTileset.tsx",
-        "ChrisCourses/Pellet Town.tmx",
-        "ChrisCourses/TilesetWater.tsx",
-        "ChrisCourses/RabbitTileset.tsx",
-        "ChrisCourses/VillagerTileset.tsx"
+        "ChrisCourses/Pellet Town.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
