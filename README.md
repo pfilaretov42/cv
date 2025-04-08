@@ -2,20 +2,31 @@
 
 # Developing
 
+## How to add a new house in Tiled
+
+- Select layer: All but foreground > Objects > House
+- On the "cv" tileset select house tiles
+- Add house on the map, flip if needed - on the toolbar (or use X shortcut)
+- Add road 
+  - select 4 road tiles on the "cv" tileset and enable Random Mode on the toolbar (or use D shortcut)
+  - add road on the map
+  - select road sides tiles and apply to the sides of the road
+- 
+
 ## When map is updated in Tiled
 
-- Export new map as image
+- Export new map as image:
   - Turn off layers
     - "Foreground objects"
     - "Not for background image"
   - Turn other layers on
   - Zoom to expected level (400%)
   - File > Export as image > Save to `img/cv-infinite.png`
-- Export foreground objects as image
+- Export foreground objects as image:
   - Turn off all the layers but "Foreground objects"
   - Zoom to expected level (400%)
   - File > Export as image > Save to `img/foregroundObjects.png`
-- Export data
+- Export data:
   - File > Export as > save as JSON
   - Find "Collisions marker" object and take `data` array
     - Replace data in `data/collisions.js`
@@ -48,7 +59,7 @@
 - Merge `master` branch into `release` branch. Accept "yours" changes on conflicts where files are deleted in `release` branch and modified in `master` branch.
 - Push `release` branch - GitHub Actions will trigger the build and deploy it.
 - Check changes on the site: https://cv.pfilaretov42.dev
-
+  
 # Links
 
 ## [React example games](https://reactjsexample.com/tag/games/)

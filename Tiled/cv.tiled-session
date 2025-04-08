@@ -5,6 +5,7 @@
     },
     "activeFile": "cv-infinite.tmx",
     "expandedProjectPaths": [
+        "."
     ],
     "exportAsImage.useCurrentScale": true,
     "file.lastUsedOpenFilter": "All Files (*)",
@@ -79,23 +80,22 @@
         },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
-                66,
-                17,
-                65
+                65,
+                66
             ],
-            "scale": 1.64,
+            "scale": 1.1563,
             "selectedLayer": 76,
             "viewCenter": {
-                "x": 774.0853658536585,
-                "y": 625.609756097561
+                "x": 432.84614719363486,
+                "y": 538.7875118913776
             }
         },
         "cv.tmx": {
-            "scale": 0.7123,
+            "scale": 0.71,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 522.9538115962375,
-                "y": 499.78941457251153
+                "x": 420.4225352112677,
+                "y": 239.43661971830983
             }
         },
         "cv.tsx": {
@@ -119,6 +119,9 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "cv.tmx",
+        "cv.tsx",
+        "cv-infinite.tmx",
         "ChrisCourses/GreenmanTileset.tsx",
         "ChrisCourses/VillagerTileset.tsx",
         "ChrisCourses/OldmanTileset.tsx",
@@ -127,9 +130,6 @@
         "ChrisCourses/DeerTileset.tsx",
         "ChrisCourses/FoxTileset.tsx",
         "ChrisCourses/RabbitTileset.tsx",
-        "cv-infinite.tmx",
-        "cv.tsx",
-        "cv.tmx",
         "ChrisCourses/Pellet Town.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
