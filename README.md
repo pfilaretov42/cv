@@ -2,16 +2,32 @@
 
 # Developing
 
-## How to add a new house in Tiled
+## How to update map in Tiled
 
-- Select layer: All but foreground > Objects > House
-- On the "cv" tileset select house tiles
-- Add house on the map, flip if needed - on the toolbar (or use X shortcut)
-- Add road 
+- Add a house on the "House" layer
+  - Select layer: All but foreground > Objects > House
+  - On the "cv" tileset select house tiles
+  - Add house on the map, flip if needed - on the toolbar (or use X shortcut)
+- Add a road on the "Road" layer
   - select 4 road tiles on the "cv" tileset and enable Random Mode on the toolbar (or use D shortcut)
   - add road on the map
   - select road sides tiles and apply to the sides of the road
-- 
+- Add a character on the "Characters" layer
+  - browse characters in `tileset` folder and choose one, e.g., `tileset/NinjaAdventure/Actor/Characters/SamuraiBlue`
+  - create a new tileset in Tiled: 
+    - File > New > New Tileset...
+    - choose source: `tileset/NinjaAdventure/Actor/Characters/SamuraiBlue/SpriteSheet.png`
+    - set name: `SamuraiBlue`
+    - set Tile width/height = 16 px
+    - Save as: `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
+  - on the newly added tileset, select the top-left tile with character
+  - add selected character on the map
+  - prepare and add images under `img/samuraiBlue` folder
+    - TODO
+    - In IDEA
+      - commit `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
+      - TODO
+- Add/update collision markers
 
 ## When map is updated in Tiled
 

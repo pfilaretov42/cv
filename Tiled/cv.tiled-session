@@ -55,6 +55,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ChrisCourses/SamuraiBlueTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "ChrisCourses/TilesetWater.tsx": {
             "scaleInDock": 1.3867,
             "scaleInEditor": 1
@@ -104,7 +108,7 @@
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/Animal-asset-pack-02-by-pixel-Predator",
+    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/NinjaAdventure/Actor/Characters/SamuraiBlue",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -119,6 +123,7 @@
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "ChrisCourses/SamuraiBlueTileset.tsx",
         "cv.tmx",
         "cv.tsx",
         "cv-infinite.tmx",
@@ -129,8 +134,7 @@
         "ChrisCourses/CowTileset.tsx",
         "ChrisCourses/DeerTileset.tsx",
         "ChrisCourses/FoxTileset.tsx",
-        "ChrisCourses/RabbitTileset.tsx",
-        "ChrisCourses/Pellet Town.tmx"
+        "ChrisCourses/RabbitTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
