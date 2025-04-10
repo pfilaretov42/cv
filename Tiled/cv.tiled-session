@@ -59,6 +59,10 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ChrisCourses/SheepTileset.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
         "ChrisCourses/TilesetWater.tsx": {
             "scaleInDock": 1.3867,
             "scaleInEditor": 1
@@ -84,14 +88,15 @@
         },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
+                17,
                 65,
                 66
             ],
-            "scale": 1.1563,
-            "selectedLayer": 76,
+            "scale": 1.78,
+            "selectedLayer": 6,
             "viewCenter": {
-                "x": 432.84614719363486,
-                "y": 538.7875118913776
+                "x": 602.8089887640449,
+                "y": 428.65168539325845
             }
         },
         "cv.tmx": {
@@ -103,12 +108,12 @@
             }
         },
         "cv.tsx": {
-            "scaleInDock": 1.5138,
+            "scaleInDock": 2.1839,
             "scaleInEditor": 1
         }
     },
     "last.exportedFilePath": "/Users/p.filaretov/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/NinjaAdventure/Actor/Characters/SamuraiBlue",
+    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/Animal-asset-pack-02-by-pixel-Predator",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -117,28 +122,26 @@
     "map.tileWidth": 12,
     "map.width": 70,
     "openFiles": [
-        "cv.tsx",
-        "cv.tmx",
         "cv-infinite.tmx"
     ],
     "project": "cv.tiled-project",
     "recentFiles": [
+        "cv-infinite.tmx",
+        "cv.tsx",
+        "ChrisCourses/SheepTileset.tsx",
         "ChrisCourses/SamuraiBlueTileset.tsx",
         "cv.tmx",
-        "cv.tsx",
-        "cv-infinite.tmx",
         "ChrisCourses/GreenmanTileset.tsx",
         "ChrisCourses/VillagerTileset.tsx",
         "ChrisCourses/OldmanTileset.tsx",
         "ChrisCourses/BoyTileset.tsx",
         "ChrisCourses/CowTileset.tsx",
         "ChrisCourses/DeerTileset.tsx",
-        "ChrisCourses/FoxTileset.tsx",
-        "ChrisCourses/RabbitTileset.tsx"
+        "ChrisCourses/FoxTileset.tsx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 16,
-        "width": 16
+        "height": 12,
+        "width": 12
     }
 }

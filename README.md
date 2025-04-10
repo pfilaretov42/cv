@@ -12,6 +12,28 @@
   - select 4 road tiles on the "cv" tileset and enable Random Mode on the toolbar (or use D shortcut)
   - add road on the map
   - select road sides tiles and apply to the sides of the road
+- Add other objects (grass, flowers, bushes, etc.) as needed
+- Add animals
+  - Go to the folder and choose an animal: `tileset/Animal-asset-pack-02-by-pixel-Predator`
+  - Copy and paste it, e.g., `tileset/Animal-asset-pack-02-by-pixel-Predator/Selection31.png`
+  - Rename indicating the size: `tileset/Animal-asset-pack-02-by-pixel-Predator/24x24-sheep.png`
+  - Adjust image size:
+    - open `tileset/Animal-asset-pack-02-by-pixel-Predator/24x24-sheep.png` in Seashore
+    - Image > Scale image:
+      - Width = 24px
+      - Height = 24px
+    - Save image
+  - create a new tileset in Tiled:
+    - File > New > New Tileset...
+    - choose source: `tileset/Animal-asset-pack-02-by-pixel-Predator/24x24-sheep.png`
+    - set name: `sheep`
+    - set Tile width/height = 12 px
+    - Save as: `Tiled/ChrisCourses/SheepTileset.tsx`
+  - Select "Animals" layer and add an animal from the new tileset
+  - In IDEA
+    - commit files
+      - `Tiled/ChrisCourses/SheepTileset.tsx`
+      - `tileset/Animal-asset-pack-02-by-pixel-Predator/24x24-sheep.png`
 - Add a character on the "Characters" layer
   - browse characters in `tileset` folder and choose one, e.g., `tileset/NinjaAdventure/Actor/Characters/SamuraiBlue`
   - create a new tileset in Tiled: 
@@ -51,6 +73,7 @@
       - `img/samuraiBlue/IdleWithDialog.png`
       - `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
 - Add/update collision markers
+- Add foreground objects markers
 
 ## When map is updated in Tiled
 
