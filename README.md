@@ -22,11 +22,34 @@
     - Save as: `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
   - on the newly added tileset, select the top-left tile with character
   - add selected character on the map
-  - prepare and add images under `img/samuraiBlue` folder
-    - TODO
-    - In IDEA
-      - commit `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
-      - TODO
+  - prepare images under `img/samuraiBlue` folder
+    - Faceset image
+      - copy `tileset/NinjaAdventure/Actor/Characters/SamuraiBlue/Faceset.png` to `img/samuraiBlue/Faceset.png`
+    - Idle images
+      - copy `tileset/NinjaAdventure/Actor/Characters/SamuraiBlue/SeparateAnim/Idle.png` to `img/samuraiBlue/IdleWithDialog.png`
+      - open `img/samuraiBlue/IdleWithDialog.png` in Seashore
+      - Image > Size & Position:
+        - Width = 80px
+        - Height = 32px
+      - Use Position Tool to move image down
+      - File > Open: `img/dialog/DialogInfo.png`
+      - `img/dialog/DialogInfo.png`: select all, copy, and paste into `img/samuraiBlue/IdleWithDialog.png`.
+        It will be added as a new Layer.
+      - Adjust characters according to dialogs:
+        - select the layer with characters again
+        - press M (Rectangle Select tool)
+        - select character
+        - press Cmd+F - selected character will be extracted as a new layer
+        - move it according to the dialog
+        - repeat - don't forget to select the first layer with characters again
+      - Save image
+      - Drop layer with dialogs and save as `img/samuraiBlue/IdleNoDialog.png`
+  - In IDEA
+    - commit files
+      - `img/samuraiBlue/Faceset.png`
+      - `img/samuraiBlue/IdleNoDialog.png`
+      - `img/samuraiBlue/IdleWithDialog.png`
+      - `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
 - Add/update collision markers
 
 ## When map is updated in Tiled
