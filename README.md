@@ -2,7 +2,7 @@
 
 # Developing
 
-## How to update map in Tiled
+## Update map in Tiled
 
 - Add a house on the "House" layer
   - Select layer: All but foreground > Objects > House
@@ -73,11 +73,11 @@
       - `img/samuraiBlue/IdleWithDialog.png`
       - `Tiled/ChrisCourses/SamuraiBlueTileset.tsx`
 - Add/update collision markers
-- Add foreground objects markers
+- Add/update foreground objects
 
-## When map is updated in Tiled
+## Update images and data
 
-- Export new map as image:
+- In Tiled export new map as image:
   - Turn off layers
     - "Foreground objects"
     - "Not for background image"
@@ -97,7 +97,7 @@
   - Find "Special zone marker" object and take `data` array
     - Replace data in `data/battleZones.js`
 
-## How to minify JS
+## Minify JS
 
 - install Terser:
   ```
@@ -105,6 +105,10 @@
   ```
 - run `terser-minifier.js` in Idea
 - result is saved to `cv.min.js`
+
+## Test locally
+
+
 
 # Deploying
 
