@@ -4,6 +4,9 @@
 
 ## Update map in Tiled
 
+As a rule of thumb, **do not replace objects with "empty" tiles**! These tiles are not actually empty and will appear as 
+non-zero values in the array when you will export the map as json. **Use Eraser tool instead** to delete objects.
+
 - Add a house on the "House" layer
   - Select layer: All but foreground > Objects > House
   - On the "cv" tileset select house tiles
@@ -92,6 +95,7 @@
   - File > Export as > save as JSON
   - Find "Collisions marker" object and take `data` array
     - Replace data in `data/collisions.js`
+    - Make sure there are only two numbers in the array: 0 and 1109 ??? Add test for this??? 
   - Find "Characters" object and take `data` array
     - Replace data in `data/characters.js`
   - Find "Special zone marker" object and take `data` array

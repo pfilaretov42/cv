@@ -40,6 +40,23 @@ const config = {
   const js6 = fs.readFileSync('classes.js', 'utf8')
   const js7 = fs.readFileSync('index.js', 'utf8')
 
+  // TODO - move it to tests?
+  // check that collisions are correct
+  const collisions = eval(js2.replaceAll("const collisions =", ""))
+  const collisionsSet = new Set(collisions)
+  if (collisionsSet.size !== 2) {
+    throw 'collisions array should contain exactly 2 distinct values [0, 1109], found ' +
+    collisionsSet.size + ': [' + Array.from(collisionsSet).join(', ') + ']'
+  }
+
+  // check that characters are correct
+  const characters = eval(js3.replaceAll("const charactersMapData =", ""))
+  const charactersSet = new Set(characters)
+  if (charactersSet.size !== 9) {
+    throw 'collisions array should contain exactly 9 distinct values, found ' +
+    charactersSet.size + ': [' + Array.from(charactersSet).join(', ') + ']'
+  }
+
   // Minify the code with Terser
   const minified = await minify([js1, js2, js3, js4, js5, js6, js7], config)
 
