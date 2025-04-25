@@ -90,6 +90,11 @@ nobleNoDialogImg.src = './img/noble/IdleNoDialog.png'
 const nobleWithDialogImg = new Image()
 nobleWithDialogImg.src = './img/noble/IdleWithDialog.png'
 
+const samuraiBlueNoDialogImg = new Image()
+samuraiBlueNoDialogImg.src = './img/samuraiBlue/IdleNoDialog.png'
+const samuraiBlueWithDialogImg = new Image()
+samuraiBlueWithDialogImg.src = './img/samuraiBlue/IdleWithDialog.png'
+
 const greenManNoDialogImg = new Image()
 greenManNoDialogImg.src = './img/greenMan/IdleNoDialog.png'
 const greenManWithDialogImg = new Image()
@@ -185,6 +190,27 @@ charactersMap.forEach((row, i) => {
                     portrait: "url('img/villager3/Faceset.png')",
                 })
             )
+        }
+        // samurai blue
+        else if (symbol === 2260) {
+          characters.push(
+            new Character({
+              position: {
+                x: j * Boundary.width + offset.x,
+                y: i * Boundary.height + offset.y
+              },
+              image: samuraiBlueNoDialogImg,
+              withDialogImage: samuraiBlueWithDialogImg,
+              frames: {
+                max: 4,
+                hold: 60
+              },
+              scale: 3,
+              animate: true,
+              dialogue: innoTexts,
+              portrait: "url('img/samuraiBlue/Faceset.png')",
+            })
+          )
         }
         // noble
         else if (symbol === 2204) {

@@ -95,11 +95,14 @@ non-zero values in the array when you will export the map as json. **Use Eraser 
   - File > Export as > save as JSON
   - Find "Collisions marker" object and take `data` array
     - Replace data in `data/collisions.js`
-    - Make sure there are only two numbers in the array: 0 and 1109 ??? Add test for this??? 
   - Find "Characters" object and take `data` array
     - Replace data in `data/characters.js`
   - Find "Special zone marker" object and take `data` array
     - Replace data in `data/battleZones.js`
+
+## Update JS
+
+- If a new character is added, find a usage of `charactersMapData` and add a new character accordingly.
 
 ## Minify JS
 
@@ -112,7 +115,7 @@ non-zero values in the array when you will export the map as json. **Use Eraser 
 
 ## Test locally
 
-
+Just open `index.html` in the browser.
 
 # Deploying
 
