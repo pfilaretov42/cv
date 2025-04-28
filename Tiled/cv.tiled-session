@@ -113,7 +113,7 @@
         }
     },
     "last.exportedFilePath": "/Users/pfilaretov42/IdeaProjects/cv/data",
-    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/Animal-asset-pack-02-by-pixel-Predator",
+    "last.imagePath": "/Users/pfilaretov42/IdeaProjects/cv/tileset/NinjaAdventure/Actor/Characters/Cavegirl",
     "map.fixedSize": false,
     "map.height": 40,
     "map.lastUsedExportFilter": "JSON map files (*.tmj *.json)",
@@ -141,7 +141,7 @@
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {
-        "height": 12,
-        "width": 12
+        "height": 16,
+        "width": 16
     }
 }

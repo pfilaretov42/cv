@@ -85,6 +85,11 @@ boyNoDialogImg.src = './img/boy/IdleNoDialog.png'
 const boyWithDialogImg = new Image()
 boyWithDialogImg.src = './img/boy/IdleWithDialog.png'
 
+const caveGirlNoDialogImg = new Image()
+caveGirlNoDialogImg.src = './img/cavegirl/IdleNoDialog.png'
+const caveGirlWithDialogImg = new Image()
+caveGirlWithDialogImg.src = './img/cavegirl/IdleWithDialog.png'
+
 const nobleNoDialogImg = new Image()
 nobleNoDialogImg.src = './img/noble/IdleNoDialog.png'
 const nobleWithDialogImg = new Image()
@@ -149,16 +154,16 @@ charactersMap.forEach((row, i) => {
                 })
             )
         }
-        // oldMan
-        else if (symbol === 1025) {
+        // cavegirl
+        else if (symbol === 2293) {
             characters.push(
                 new Character({
                     position: {
                         x: j * Boundary.width + offset.x,
                         y: i * Boundary.height + offset.y
                     },
-                    image: oldManNoDialogImg,
-                    withDialogImage: oldManWithDialogImg,
+                    image: caveGirlNoDialogImg,
+                    withDialogImage: caveGirlWithDialogImg,
                     frames: {
                         max: 4,
                         hold: 60
@@ -166,7 +171,7 @@ charactersMap.forEach((row, i) => {
                     scale: 3,
                     animate: true,
                     dialogue: educationTexts,
-                    portrait: "url('img/oldMan/Faceset.png')",
+                    portrait: "url('img/cavegirl/Faceset.png')",
                 })
             )
         }
@@ -212,26 +217,26 @@ charactersMap.forEach((row, i) => {
             })
           )
         }
-        // noble
-        else if (symbol === 2204) {
-            characters.push(
-                new Character({
-                    position: {
-                        x: j * Boundary.width + offset.x,
-                        y: i * Boundary.height + offset.y
-                    },
-                    image: nobleNoDialogImg,
-                    withDialogImage: nobleWithDialogImg,
-                    frames: {
-                        max: 4,
-                        hold: 60
-                    },
-                    scale: 3,
-                    animate: true,
-                    dialogue: okkoTexts,
-                    portrait: "url('img/noble/Faceset.png')",
-                })
-            )
+        // oldman
+        else if (symbol === 1025) {
+          characters.push(
+            new Character({
+              position: {
+                x: j * Boundary.width + offset.x,
+                y: i * Boundary.height + offset.y
+              },
+              image: oldManNoDialogImg,
+              withDialogImage: oldManWithDialogImg,
+              frames: {
+                max: 4,
+                hold: 60
+              },
+              scale: 3,
+              animate: true,
+              dialogue: okkoTexts,
+              portrait: "url('img/oldMan/Faceset.png')",
+            })
+          )
         }
         // greenman
         else if (symbol === 2148) {
@@ -421,7 +426,7 @@ function activateBattle(animationId) {
                             document.querySelector('#characterDialogueBox').style.display = 'flex'
 
                             document.querySelector('#characterDialoguePortrait').style.display = 'flex'
-                            document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/cavegirl/Faceset.png')"
+                            document.querySelector('#characterDialoguePortrait').style.backgroundImage = "url('img/noble/Faceset.png')"
 
                             document.querySelector('#characterDialogueQrCode').style.display = 'flex'
 
