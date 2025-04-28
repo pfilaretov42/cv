@@ -38,7 +38,7 @@ const contactsTexts = [
     "<a href=\"https://www.linkedin.com/in/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ LinkedIn</a>",
     "<a href=\"https://dev.to/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ dev.to</a>",
     "<a href=\"https://github.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ GitHub</a>",
-    "<a href=\"https://twitter.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ Twitter</a>",
+    "<a href=\"https://x.com/pfilaretov42\" target=\"_blank\" rel=\"noopener noreferrer\">pfilaretov42 @ X</a>",
 ]
 
 const innoTexts = [
