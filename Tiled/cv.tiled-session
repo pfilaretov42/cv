@@ -17,6 +17,9 @@
             "scaleInDock": 1,
             "scaleInEditor": 1
         },
+        "ChrisCourses/CaveGirlTileset.tsx": {
+            "scaleInDock": 1
+        },
         "ChrisCourses/CowTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
@@ -28,6 +31,9 @@
         "ChrisCourses/FoxTileset.tsx": {
             "scaleInDock": 1,
             "scaleInEditor": 1
+        },
+        "ChrisCourses/FrogTileset.tsx": {
+            "scaleInDock": 1
         },
         "ChrisCourses/GreenmanTileset.tsx": {
             "scaleInDock": 1,
@@ -88,9 +94,9 @@
         },
         "cv-infinite.tmx": {
             "expandedGroupLayers": [
-                17,
+                66,
                 65,
-                66
+                17
             ],
             "scale": 1.78,
             "selectedLayer": 6,

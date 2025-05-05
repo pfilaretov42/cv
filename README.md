@@ -128,6 +128,7 @@ Just open `index.html` in the browser.
 - Minify JS - [see above](#how-to-minify-js)
 - Open `index.html` in a browser to check changes
 - Commit and push changes to `master`
+- Close Tiled! Otherwise, it will keep a session file and throw errors.
 - Checkout `release` branch
 - Merge `master` branch into `release` branch. Accept "yours" changes on conflicts where files are deleted in `release` branch and modified in `master` branch.
 - Push `release` branch - GitHub Actions will trigger the build and deploy it.
